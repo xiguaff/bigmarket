@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>修改密码</title>
+  <link rel="stylesheet" href="./css/mypro.css" />
+ </head>
+ <body>
+	<div class="img1">
+		<a href="index.html">
+      <img src="./image/logo.png" alt="" />
+		  <b>您想要的我都有</b>
+    </a>
+	</div>
+	<div id="content">
+		<div class="contanier">
+			<div class="text">
+				<p>修改密码</p>
+				<hr />
+			</div>
+			<div class="di5">
+				<input type="password"  class="upwd1" onfocus="get_pwd()" onblur="check_pwd()" id="pwd" placeholder="请输入您要修改的密码"/>
+				<span id="msg111"></span>
+			</div>
+			<div class="di5">
+				<input type="password"  class="upwd12" onfocus="get_upwd()" onblur="check_upwd()" id="upwd" placeholder="请确认您要修改的密码"/>
+				<span id="msg222"></span>
+			</div>
+			<div>
+				<button id="view1" onclick="updateupwd()">确认修改</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//密码框失去焦点
+		function get_pwd(){
+			if(!pwd.value){
+				msg111.innerHTML="请输入密码6~12位";
+			}
+		}
+		function check_pwd(){
+			if(!pwd.value){
+				msg111.innerHTML="密码不能为空";	
+			}else if(pwd.value.length<=12&&pwd.value.length>=6){
+				msg111.innerHTML="密码格式正确";
+			}else{
+				msg111.innerHTML="密码格式错误";
+			};
+		};
+		//密码框失去焦点
+		function get_upwd(){
+			if(!upwd.value){
+				msg222.innerHTML="请输入密码6~12位";
+			}
+		}
+		function check_upwd(){
+			if(!upwd.value){
+				msg222.innerHTML="密码不能为空";
+			}else if(upwd.value==pwd.value){
+				msg222.innerHTML="两次输入密码一致"
+			}else{
+				msg222.innerHTML="两次输入密码不一致";
+			};
+		};
+		//提交数据，修改数据
+		function updateupwd(){
+			//获取之前网页？传过来的参数
+			var url=new URLSearchParams(location.search);
+			//获取参数中的uid
+			var uid=url.get("uid");
+			//1.创建xhr异步对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，获取响应数据
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert("密码修改成功");
+						alert("小可爱不要忘了哟");
+						window.location.href="userlogin.html";
+					};
+				};
+			};
+			//2.创建请求
+			xhr.open("put","/mypro/v5/updateupwd",true);
+			//修改请求头信息
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			//创建请求主题formdata
+			var formdata="uid="+uid+"&upwd="+pwd.value;
+			//3.发送请求
+			xhr.send(formdata);
+		};
+	</script>
+ </body>
+</html>

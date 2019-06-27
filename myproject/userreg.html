@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>用户注册</title>
+	 <link rel="stylesheet" href="./css/mypro.css" />
+ </head>
+ <body>
+	<div class="img1">
+		<a href="index.html">
+      <img src="./image/logo.png" alt="" />
+		  <b>你想要的我都有</b>
+    </a>
+	</div>
+	<div id="content">
+		<table></table>
+		<div id="contanier">
+			<div class="text">
+				<p>新用户注册</p>
+			</div>
+			<div>
+				<input class="uname" type="text" placeholder="请输入用户名" id="uname" onfocus="getname()" onblur="check_uname()"/>
+				<span id="msg1"></span>
+			</div>
+			<div>
+				<input class="upwd" type="password" placeholder="请输入密码" id="upwd" onfocus="getupwd()" onblur="check_upwd()"/>
+				<span id="msg2"></span>
+			</div>
+			<div>
+				<input class="pwd" type="password" placeholder="确认密码" id="pwd" onfocus="getpwd()" onblur="check_pwd()"/>
+				<span id="msg3"></span>
+			</div>
+			<div>
+				<input class="email" type="text" placeholder="请输入邮箱" id="email" onfocus="getemail()" onblur="check_email()"/>
+				<span id="msg4"></span>
+			</div>
+			<div>
+				<input class="phone" type="phone" placeholder="请输入电话号码" id="phone" onfocus="getphone()" onblur="check_phone()"/>
+				<span id="msg5"></span>
+			</div>
+			<div class="d2">
+				<input type="radio" id="m" value="1" name="gender"/>
+				<label for="m">男</label>
+				<input type="radio" id="f" value="0" name="gender"/>
+				<label for="f">女</label>
+			</div>
+			<div class="d1">
+				<p>已有账号？<a href="userlogin.html" class="pub">直接登录</a></p>
+			</div>
+			<div>
+				<button id="view" onclick="userreg()">注&nbsp;&nbsp;册</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//用户名输入框获取焦点/失去焦点
+		function getname(){
+			msg1.innerHTML="用户名6~12位";
+		};
+		function check_uname(){
+			if(!uname.value){
+				msg1.innerHTML="用户名不能为空";
+			}else if(uname.value.length<=12&&uname.value.length>=6){
+				msg1.innerHTML="格式正确";
+			}else{
+				msg1.innerHTML="格式错误";
+			};
+			//判断用户名是否可用
+			//创建xhr异步对象
+			var xhr=new XMLHttpRequest();
+			//绑定监听，获取响应数据
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					console.log(123);
+					var result=xhr.responseText;
+					if(result==1){
+						msg1.innerHTML="用户名已存在";
+					}else{
+						msg1.innerHTML="用户名可用";
+					};
+				};
+			};
+			//创建请求
+			xhr.open("get","/mypro/v5/check/"+uname.value,true);
+			//发送请求
+			xhr.send();
+		};
+		//密码输入框获取焦点/失去焦点
+		function getupwd(){
+			msg2.innerHTML="密码长度6~12位";
+		};
+		function check_upwd(){
+			if(!upwd.value){
+				msg2.innerHTML="密码不能为空";	
+			}else if(upwd.value.length<=12&&upwd.value.length>=6){
+				msg2.innerHTML="密码格式正确";
+			}else{
+				msg2.innerHTML="密码格式错误";
+			};
+		};
+		//确认密码框获取焦点/失去焦点
+		function getpwd(){
+			msg3.innerHTML="密码长度6~12位";
+		};
+		function check_pwd(){
+			if(!pwd.value){
+				msg3.innerHTML="密码不能为空";
+			}else if(upwd.value==pwd.value){
+				msg3.innerHTML="两次输入密码一致"
+			}else{
+				msg3.innerHTML="两次输入密码不一致";
+			};
+		};
+		//邮箱输入框获取焦点/失去焦点
+		function getemail(){
+			msg4.innerHTML="请输入合法的邮箱";
+		};
+		function check_email(){
+			if(!email.value){
+				msg4.innerHTML="邮箱不能为空";
+			}else if(email.value.lastIndexOf("@")===-1){
+				msg4.innerHTML="邮箱格式错误";
+			}else{
+				msg4.innerHTML="邮箱格式正确";
+			};
+		};
+		//电话输入框获取焦点/失去焦点
+		function getphone(){
+			msg5.innerHTML="请输入合法的电话号码";
+		};
+		function check_phone(){
+			if(!phone.value){
+				msg5.innerHTML="电话号码不能为空";
+			};
+		};
+		function userreg(){
+			//1.创建xhr异步对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听，获取响应数据
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert("注册成功")
+						window.location.href="userlogin.html";
+					}else{
+						alert(result);
+						alert("注册失败")
+					}
+				}
+			};
+			//将性别单选框提交的数据转换成 男->1 女->0
+			var gender=""
+			if(m.checked){
+				gender=1;
+			}else if(f.checked){
+				gender=0;
+			};
+			//2.创建请求
+			xhr.open("post","/mypro/v5/reg",true);
+			//设置请求头信息
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			//创建formdata
+			var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&gender="+gender
+			//发送请求
+			xhr.send(formdata);
+		};
+	</script>
+ </body>
+</html>

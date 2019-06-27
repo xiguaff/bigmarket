@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>用户信息</title>
+  <link rel="stylesheet" href="./css/mypro.css" />
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/popper.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+ </head>
+ <body onload="list_user()">
+	<div class="img1">
+		<a href="index.html">
+      <img src="./image/logo.png" alt="">
+		  <b>你想要的我都有</b>
+    </a>
+	</div>
+	<div class="marin">
+
+	</div>
+	<script type="text/javascript">
+		function list_user(){
+			//获取前一个网页？后面的参数
+			var url=new URLSearchParams(location.search);
+			//获取参数中uid
+			var uid=url.get("uid");
+			//创建xhr异步对象
+			var xhr=new XMLHttpRequest();
+			//绑定监听，获取响应数据
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+				};
+			};
+			//创建请求
+			xhr.open("get","/mypro/v5/userlist/"+uid,true);
+			//发送请求
+			xhr.send();
+		};
+	</script>
+ </body>
+</html>

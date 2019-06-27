@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="./css/mypro.css" />
+ </head>
+ <body>
+	<div class="img1">
+		<a href="index.html">
+      <img src="./image/logo.png" alt="" />
+		  <b>你想要的我都有</b>
+    </a>
+	</div>
+	<div id="content">
+		<div class="contanier">
+			<div class="text">
+				<p>欢迎登录<a href="userreg.html" class="pub">新用户注册</a></p>
+				<hr />
+			</div>
+			<div class="di4">
+				<input type="text" placeholder="输入您的用户名" class="uname1" id="uname" onblur="check_uname()"/>
+				<span id="msg11"></span>
+			</div>
+			<div class="di5">
+				<input type="password" placeholder="输入您的密码" class="upwd1" id="upwd" onblur="check_upwd()"/>
+				<span id="msg22"></span>
+			</div>
+			<div class="di6">
+				<input type="checkbox" id="check"/>
+				<label for="check">自动登录</label>
+				<a href="check.html" class="pub">忘记密码？</a>
+			</div>
+			<div class="di7">
+				<button onclick="userlogin()" id="view1">登录</button>
+			</div>
+		</div>	
+	</div>
+	<script type="text/javascript">
+		//用户名框失去焦点
+		function check_uname(){
+			if(!uname.value){
+				msg11.innerHTML="用户名不能为空";
+			}
+		}
+		//密码框失去焦点
+		function check_upwd(){
+			if(!upwd.value){
+				msg22.innerHTML="密码不能为空";
+			}
+		}
+		function userlogin(){
+			//创建xhr异步对象
+			var xhr=new XMLHttpRequest();
+			//绑定监听，获取响应数据
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					//json数据解析
+					var arr=JSON.parse(result);
+					console.log(arr[0]);
+					if(result==0){
+						alert("登录失败");
+						alert("用户名或者密码错误");
+					}else{	
+						alert("登录成功");
+						getuserlist(arr[0].uid);
+					};
+				};
+			};
+			//判断是否为空
+			if(!uname.value){
+				alert("用户不能为空");
+			};
+			if(!upwd.value){
+				alert("密码不能为空");
+			};
+			//创建请求
+			xhr.open("get","/mypro/v5/login/"+uname.value+"&"+upwd.value,true);
+			//发送请求
+			xhr.send();
+		};
+		function getuserlist(uid){
+			location.href="userlist.html?"+uid;
+		};
+	</script>
+ </body>
+</html>

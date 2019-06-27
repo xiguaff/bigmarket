@@ -1,0 +1,12 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS xm;
+CREATE DATABASE xm;
+USE xm;
+CREATE TABLE xm_user(
+	uid INT PRIMARY KEY AUTO_INCREMENT,
+	uname VARCHAR(50),
+	upwd VARCHAR(50),
+	email VARCHAR(50),
+	phone VARCHAR(50),
+	gender INT /*1-->男 0-->女*/
+)
