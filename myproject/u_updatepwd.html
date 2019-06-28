@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户信息</title>
+    <link rel="stylesheet" href="./css/userlist.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="img1">
+        <a href="index.html">
+            <img src="./image/logo.png" alt="">
+            <b>你想要的我都有</b>
+        </a>
+    </div>
+    <div class="container">
+        <ul class="breadcrumb mt-5">
+            <li class="breadcrumb-item">
+                <a href="index.html">首页</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="userlist.html">用户中心</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="userlist.html">密码修改</a>
+            </li>
+        </ul>
+        <div class="row m-0">
+                <div class="col-2 p-0">
+                    <div class="card">
+                        <div class="card-header p-2 bg-transparent"> 
+                            <a href="#indent" data-toggle="collapse" class="card-link">我的订单<img class="ml-6" src="./image/arr.jpg" alt=""></a>
+                        </div>
+                        <div id="indent" class="collapse">
+                        <div class="card-body p-2 text-center">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="">全部订单</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="">待付款</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="">待收货</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="">待评价</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="">退货退款</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-header p-2 bg-transparent"> 
+                            <a href="#site" data-toggle="collapse" class="card-link">地址信息<img class="ml-6" src="./image/arr.jpg" alt=""></a>
+                    </div>
+                    <div id="site" class="collapse">
+                        <div class="card-body p-2 text-center">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="">添加收货地址</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-header p-2 bg-transparent"> 
+                            <a href="#user_list" data-toggle="collapse" class="card-link">账号管理<img class="ml-6" src="./image/arr.jpg" alt=""></a>
+                    </div>
+                    <div id="user_list" class="collapse">
+                        <div class="card-body p-2 text-center">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="">我的信息</a>
+                                </li>
+                                <li>
+                                    <a href="">密码修改</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="list_header p-2 px-5"><span style="color:#808080">我的信息</span></div>
+                <div class="user_list p-5">
+                    <div>
+                        <span id="userlist">原密码</span>：<input id="upwd" type="text">
+                    </div>
+                    <hr>
+                    <div>
+                        <span id="userlist">新密码</span>：<input id="pwd" type="text">
+                    </div>
+                    <hr>
+                    <div>
+                        <span id="userlist">确认密码</span>：<input id="u_pwd" type="">
+                    </div>
+                    <hr>
+                    <div>
+                        <button class="btn btn-primary ml-5">保存修改</button>
+                    </div>	
+                </div>
+            </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+            function list_user(){
+                //获取前一个网页？后面的参数
+                var url=new URLSearchParams(location.search);
+                //获取参数中uid
+                var uid=url.get("uid");
+                //创建xhr异步对象
+                var xhr=new XMLHttpRequest();
+                //绑定监听，获取响应数据
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var result=xhr.responseText;
+                    };
+                };
+                //创建请求
+                xhr.open("get","/mypro/v5/userlist/"+uid,true);
+                //发送请求
+                xhr.send();
+            };
+        </script>
+</body>
+</html>
