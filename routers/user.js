@@ -113,5 +113,50 @@ router.put("/v5/updateupwd",(req,res)=>{
 		};
 	});
 });
+
+//添加查询用户信息列表路由
+router.get("/v5/userlist/:uid",(req,res)=>{
+	//获取数据
+	var $uid=req.params.uid;
+	//执行SQL语句
+	pool.query("select uname,phone,email,gender from xm_user where uid=?",[$uid],(err,result)=>{
+		if(err) throw err;
+		if(result.length>0){
+			res.send(result);
+		};
+	});
+});
+
+//添加用户修改信息路由
+router.put("/v5/userUpdate",(req,res)=>{
+	//获取数据
+	var obj=req.body;
+	console.log(obj);
+	//执行SQL语句
+	pool.query("update xm_user set uname=?,phone=?,email=?,gender=? where uid=?",[obj.uname,obj.phone,obj.email,obj.gender,obj.uid],(err,result)=>{
+		if(err) throw err;
+		if(result.affectedRows>0){
+			res.send("1");
+		}else{
+			res.send("0");
+		}
+	});
+});
+
+//创建用户登录后修改密码
+router.put("/v5/u_updatepwd",(req,res)=>{
+	//获取数据
+	var obj=req.body;
+	console.log(obj);
+	//执行SQL语句
+	pool.query("update xm_user set upwd=? where uid=? and upwd=?",[obj.pwd,obj.uid,obj.upwd],(err,result)=>{
+		if(err) throw err;
+		if(result.affectedRows>0){
+			res.send("1");
+		}else{
+			res.send("0");
+		};
+	});
+});
 //导出路由器
 module.exports=router;

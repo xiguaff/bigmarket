@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>用户信息</title>
+    <title>收货地址</title>
     <link rel="stylesheet" href="./css/userlist.css" />
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -66,7 +66,7 @@
                 <a href="userlist.html">用户中心</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="userlist.html">密码修改</a>
+                <a href="userlist.html">收货地址</a>
             </li>
         </ul>
         <div class="row m-0">
@@ -129,15 +129,32 @@
                 <div class="list_header p-2 px-5"><span style="color:#808080">我的信息</span></div>
                 <div class="user_list p-5">
                     <div>
-                        <span id="userlist">原密码</span>：<input id="upwd" type="text">
+                        <span id="userlist">省份</span>： 
+                        <select name="province" id="">
+                            <option value="新疆">新疆</option>
+                            <option value="">西藏</option>
+                            <option value="">云南省</option>
+                            <option value="">青海省</option>
+                            <option value="">四川省</option>
+                            <option value="">陕西省</option>
+                            <option value="">湖南省</option>
+                            <option value="">浙江省</option>
+                            <option value="">广东省</option>
+                            <option value="">福建省</option>
+                            <option value="">湖北省</option>
+                            <option value="">贵州省</option>
+                            <option value="">江苏省</option>
+                            <option value="">山东省</option>
+              
+                        </select>
                     </div>
                     <hr>
                     <div>
-                        <span id="userlist">新密码</span>：<input id="pwd" type="text">
+                        <span id="userlist">城市</span>：<input id="pwd" type="text">
                     </div>
                     <hr>
                     <div>
-                        <span id="userlist">确认密码</span>：<input id="u_pwd" type="">
+                        <span id="userlist">详细地址</span>：<input id="u_pwd" type="">
                     </div>
                     <hr>
                     <div>
@@ -344,41 +361,7 @@
             </ul>
         </div>
         <script type="text/javascript">
-            function u_updatepwd(){
-                //获取前一个网页？后面的参数
-                var url=new URLSearchParams(location.search);
-                //获取参数中uid
-                var uid=url.get("uid");
-                //创建xhr异步对象
-                var xhr=new XMLHttpRequest();
-                //绑定监听，获取响应数据
-                xhr.onreadystatechange=function(){
-                    if(xhr.readyState==4&&xhr.status==200){
-                        var result=xhr.responseText;
-                        if(result==1){
-                            alert("密码修改成功");
-                            skipuserlist()
-                        }else{
-                            alert("修改失败，请检查原密码是否输入正确");
-                        };
-                    };
-                };
-                //创建请求
-                xhr.open("put","/mypro/v5/u_updatepwd",true);
-                //修改请求头信息
-                xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-                //创建formdata
-                var formdata="uid="+uid+"&upwd="+upwd.value+"&pwd="+pwd.value;
-                //发送请求
-                xhr.send(formdata);
-            };
-            function skipuserlist(){
-                //获取前一个网页？后面的参数
-                var url=new URLSearchParams(location.search);
-                //获取参数中uid
-                var uid=url.get("uid");
-                location.href="userlist.html?uid="+uid;
-            }
+
         </script>
 </body>
 </html>

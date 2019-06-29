@@ -2,7 +2,10 @@
 .breadcrumb{
     background-color:transparent !important;
 }
-.breadcrumb-item + .breadcrumb-item::before{
+li.breadcrumb-item+ li.breadcrumb-item::before{
+    content:"丨" !important;
+}
+#bread .breadcrumb-item + .breadcrumb-item::before{
     content:">" !important; 
     color:#0aa1ed;
 }
@@ -87,4 +90,100 @@ b{
 }
 label{
     margin-bottom:0px !important;
+}
+ul.breadcrumb{
+    background-color:#fff;
+}
+.inu1{
+    width:65%;height:36px;
+    padding:5px 10px;
+    box-sizing:border-box;
+    outline:none;
+    position:relative;
+    top:2px;left:-40px;
+    border-radius: 0.25rem;
+    border-color:#ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-image:url("../image/sou.png");
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:25px 25px;
+}
+.inu1:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+#login_bg{
+    background-image:url("../image/jing.jpg");
+    width:18px;height:15px;
+    display:inline-block;
+    background-position:-59px -200px;
+}
+#reg_bg{
+    background-image:url("../image/jing.jpg");
+    width:17px;height:15px;
+    display:inline-block;
+    background-position:-249px -2px;
+}
+#shop_bg{
+    background-image:url("../image/shop_car.png");
+    width:18px;height:16px;
+    display:inline-block;
+    background-position:-2px 0px;
+}
+#care_bg{
+    background-image:url("../image/jing.jpg");
+    width:17px;height:15px;
+    display:inline-block;
+    background-position:-139px -144px;	
+}
+#user_bg{
+    background-image:url("../image/jing.jpg");
+    width:17px;height:15px;
+    display:inline-block;
+    background-position:-149px -42px;
+}
+.top_a a{
+    color:#808080 !important;
+}
+.col-3 a img{
+    transition:0.5s;
+}
+.col-3 a img:hover{
+    transform:scale(1.1);
+}
+.top_a a:hover{
+    color:#00f !important;
+    text-decoration:none;
+}
+#sym div img{
+    width:99px;height:80px;
+}
+#sym div a:hover{
+    color:#00f;
+    text-decoration:none;
+}
+#last{
+    margin-top:85px;
+}
+.end_hr{
+    margin-top:100px;
+}
+ul.list-unstyled li:first-child{
+    color:#808080;
+    margin-bottom:0.75rem;
+}
+#end_list div ul.list-unstyled li:not(:first-child) a{
+    color:#909090;
+    font-size:0.75rem;
+} 
+#end_list div ul.list-unstyled li a:hover{
+    color:#aaa;
+}
+#end_bread li a{
+    color:#808080;
+    font-size:0.75rem;
 }
