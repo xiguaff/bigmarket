@@ -1,7 +1,11 @@
 	*{margin:0;padding:0;}
 	.my_mr{
 		margin:6rem 0 0 15%;
-		width:60%;
+		width:65%;
+	}
+	.my_visible{
+		margin:6rem 0 0 15%;
+		width:75%;
 	}
 	 a.carousel-control-prev,a.carousel-control-next{
 		width:5%;height:10%;
@@ -44,7 +48,35 @@
 		margin-left:6%;
 	}
 
-
+	/*隐藏导航栏*/
+	table tr td{
+		padding:0.5rem
+	}
+	.visible_1{
+		position:absolute;
+		left: 150px;
+		top:-7px;
+		visibility:hidden;
+		z-index:100;
+		background:#fff;
+		border:2px solid #e8e8e8;
+	}
+	div.my_visible ul li{
+		width:17%;
+	}
+	div.my_visible ul li:hover .visible_1{
+		visibility:visible;
+	}
+	div.my_visible li a{
+		color:#0aa1ed !important;
+		font-size:1rem !important;
+	}
+	.font_table{
+		font-size:0.75rem !important;
+	}
+	table.font_table tr td a{
+		font-size:0.75rem !important;
+	}
 	/*面包屑导航中a标签字体颜色及分隔符设置*/
 	ul.breadcrumb{
 		background-color:#fff;
@@ -185,20 +217,19 @@
 
 	/*1楼第1个商品框样式*/
 	.two{
-		width:59%;
+		width:54%;
 		background:#fff;
-		border:2px solid #e8e8e8;
+		border:1px solid #e8e8e8;
 		margin-bottom:10px;
-		position:relative;
 	}
 
 	/*第1个商品图片*/
-	.two img{
+	/* .two img{
 		width:60%;height:80%;
 		position:absolute;
 		top:29%;left:38%;
 		transition:1s;
-	}
+	} */
 
 	/*第1个商品图片鼠标悬停效果*/
 	.two img:hover{
@@ -206,31 +237,6 @@
 	}
 
 	/*第1个商品框中商品详情板块*/
-	.two div{
-		width:70%;
-		margin:20px 0 0 40px;
-	}
-	.h11{
-		color:#031;
-		margin-bottom:10px;
-		font-size:2rem;
-	}
-	.act{
-		font-size:3rem;
-		font-weight:bold;
-		color:#f00;
-		margin-bottom:6px;
-	}
-	.act1{
-		font-size:2rem;
-		font-weight:bold;
-		color:#f00;
-		margin-bottom:30px;
-	}
-	.detail_1{
-		font-size:1rem;
-		margin-bottom:30px;
-	}
 
 	/*1楼第1个商品a标签-查看详情样式*/
 	.link{
@@ -257,19 +263,18 @@
 
 	/*1楼第2个商品框*/
 	.three{
-		width:40%;
-		border:2px solid #e8e8e8;
+		width:45%;
+		border:1px solid #e8e8e8;
 		margin-bottom:10px;
-		position:relative;
 	}
 
 	/*第2个商品图片*/
-	.three div img{
+	/* .three div img{
 		width:64%;height:61%;
 		position:absolute;
 		top:160px;left:-20px;
 		transition:0.5s;
-	}
+	} */
 
 	/*第2个商品图片鼠标悬停效果*/
 	.three div img:hover{
@@ -277,23 +282,6 @@
 	}
 
 	/*第2个商品详情板块*/
-	.detail h1{
-		color:#f00;
-		margin-bottom:20px;
-	}
-	.detail{
-		width:65%;
-		position:absolute;
-		top:33px;left:120px;
-		text-align:right;
-	}
-	.detail_2{
-		color:#f00;
-		margin-top:30px;
-		font-size:1.5rem;
-		font-weight:bold;
-		margin-bottom:30px;
-	}
 
 	/*1楼第2个商品a标签查看详情样式*/
 	.link_1{
@@ -334,7 +322,7 @@
 
 	/*通用字体大小*/
 	.font_small{
-		font-size:0.85rem;
+		font-size:0.5rem;
 	}
 
 	/*1楼第5个商品框*/
@@ -345,13 +333,13 @@
 	}
 
 	/*首页1楼所有轮播指示器样式*/
-	#phone_carousel_right li,#computer_carousel-left li,#computer_carousel-right li,#phone-carousel li{
+	#middle-four li,#phone_carousel_right li,#computer_carousel-left li,#computer_carousel-right li,#phone-carousel li{
 		width:0.75rem;height:0.75rem;
 		background-color:#ddd;
 	}
 
 	/*首页1楼所有轮播指示器active样式*/
-	#phone_carousel_right li.active,#computer_carousel-left li.active,#computer_carousel-right li.active,#phone-carousel li.active{
+	#middle-four li.active,#phone_carousel_right li.active,#computer_carousel-left li.active,#computer_carousel-right li.active,#phone-carousel li.active{
 		background-color:#00f;
 	}
 
@@ -383,21 +371,45 @@
 	}
 	.middle_three{
 		width:32%;
-		background:#e8e8e8;
+		border:1px solid #e8e8e8;
 		margin-bottom:10px;
 	}
 	.middle_four{
-		width:50%;height:400px;
-		background:#e8e8e8;
+		width:50%;
+		border:1px solid #e8e8e8;
 		margin-bottom:10px;
 	}
 	.middle_five{
-		width:49%;height:400px;
-		background:#e8e8e8;
+		width:49%;
+		border:1px solid #e8e8e8;
 		margin-bottom:10px;
 	}
 
-	/**/
+	/*2楼所有商品收藏链接及鼠标悬停样式*/
+	.collect{
+		display:block;
+		width:40%;height:40px;
+		background-color:#f00;
+		border:0;
+		color:#fff;
+		text-decoration:none;
+		text-align:center;
+		line-height:40px;
+		border-radius:5px;
+		transition:0.5s;
+		font-size:1rem;
+	}
+	.collect:hover{
+		color:#fff;
+		text-decoration:none;
+		transform:scale(1.1);
+	}
+
+	/*2楼所有商品详情链接鼠标悬停样式*/
+	.detail_a:hover{
+		text-decoration:none;
+		color:#f00 !important;
+	}
 	#bottom{
 		width:60%;
 		margin:10px 20%;
@@ -439,14 +451,12 @@
 	#left{
 		width:290px;
 		height:400px;
-		border:1px solid #e8e8e8;
 		position:fixed;
 		top:216px;left:0px;
 	}
 	#right{
 		width:290px;
 		height:400px;
-		border:1px solid #e8e8e8;
 		float:right;
 		position:fixed;
 		top:216px;right:0px;
