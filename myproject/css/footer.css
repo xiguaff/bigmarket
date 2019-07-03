@@ -1,0 +1,24 @@
+#footer div img{
+    width:99px;height:80px;
+}
+#footer a:hover{
+    text-decoration:none;
+}
+#footer a:hover p{
+    color:#f00 !important;
+}
+ul.list-unstyled li:first-child{
+    color:#808080;
+    margin-bottom:0.75rem;
+}
+ul.list-unstyled li:not(:first-child) a{
+    color:#909090;
+    font-size:0.75rem;
+}
+#end_bread li a{
+    color:#808080;
+    font-size:0.75rem;
+}
+li.breadcrumb-item+ li.breadcrumb-item::before{
+    content:"丨";
+}
