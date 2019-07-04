@@ -11,9 +11,9 @@
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script src="./js/index.js"></script>
  </head>
- <body>
+ <body onload="conttime()">
   	<div class="container">
-			<div id="header">
+		<div id="header">
 					<ul class="breadcrumb m-0 p-0">
 						<li class="breadcrumb-item">
 							 <a href="javascript:skiplogin()">
@@ -46,8 +46,8 @@
 							</a>
 						</li>
 					</ul>
-			</div>
-			<div class="row mt-5">
+		</div>
+		<div class="row mt-5">
 					<div class="col-lg-3 col-md-12 p-0">
 						<a href="#">
 							<img src="./image/logo.png" alt="" id="p"/>
@@ -55,18 +55,55 @@
 					</div>
 					<div class="col-lg-8 col-md-12 text-center mt-4">
 						<input class="inp" type="text" placeholder="请输入您要搜索的内容"/>
-						<div>
-							<span>男装</span><span>女装</span><span>童装</span>
+						<div class="top_nav d-flex justify-content-center">
+							<div class="carousel" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<span><a class="text-danger" href="">浪琴</a></span>
+									</div>
+									<div class="carousel-item">
+										<span><a class="text-danger" href="">DW</a></span>
+									</div>
+									<div class="carousel-item">
+										<span><a class="text-danger" href="">LV</a></span>
+									</div>
+									<div class="carousel-item">
+										<span><a class="text-danger" href="">阿玛尼</a></span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span class="ml-3 font_small"><a href="">男装</a></span><span class="ml-3 font_small"><a href="">女装</a></span>
+								<span class="ml-3 font_small"><a href="">童装</a></span><span class="ml-3 font_small"><a href="">电脑</a></span>
+								<span class="ml-3 font_small"><a href="">手机</a></span><span class="ml-3 font_small"><a href="">钟表</a></span>
+								<span class="ml-3 font_small"><a href="">奢侈品</a></span><span class="ml-3 font_small"><a href="">家装建材</a></span>
+								<span class="ml-3 font_small"><a href="">婴儿用品</a></span>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-1 mt-3 p-0">
 								
 					</div>
-			</div>
+		</div>
+	</div>
+	<div class="mt-5 bg_nav p-2 text-muted">
+		<ul class="list-unstyled d-flex mb-0 justify-content-center">
+			<li class="text-muted">大超市精选</li>
+			<li class="ml-5 text-muted">优惠券</li>
+			<li class="ml-5 text-muted">秒杀</li>
+			<li class="ml-5 text-muted">闪购</li>
+			<li class="ml-5 text-muted">超市生鲜</li>
+			<li class="ml-5 text-muted">超市水果</li>
+			<li class="ml-5 text-muted">全球超市</li>
+			<li class="ml-5 text-muted">超市抢购</li>
+			<li class="ml-5 text-muted">智能生活</li>
+		</ul>
+	</div>
+	<div class="container">
 		<div class="position-relative">
 			<!--隐藏导航栏-->
 			<div class="my_visible">
-				<ul class="list-unstyled position-relative">
+				<ul class="list-unstyled position-relative ul_visi pl-2">
 					<li class="mb-0">
 						<a href="">家用电器</a>
 						<div class="visible_1">
@@ -2678,25 +2715,25 @@
 					<!--第一部分，图片 -->
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="./image/carousel2.jpg" alt="" />
+							<img src="./image/carousel2.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/carousel3.jpg" alt="" />
+							<img src="./image/carousel3.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/carousel1.jpg" alt="" />
+							<img src="./image/carousel1.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/carousel.jpg" alt="" />
+							<img src="./image/carousel.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/6cc9209f.jpg" alt="" />
+							<img src="./image/6cc9209f.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/906ca2f5.jpg" alt="" />
+							<img src="./image/906ca2f5.jpg" alt=""  class="img_height"/>
 						</div>
 						<div class="carousel-item">
-							<img src="./image/fb7104ed.jpg" alt="" />
+							<img src="./image/fb7104ed.jpg" alt=""  class="img_height"/>
 						</div>
 					</div>
 					<!-- 第二部分，左右两个箭头
@@ -2717,7 +2754,69 @@
 						<li data-slide-to="6" data-target="#demo"></li>
 					</ul>
 			</div>
+			<div class="login_no text-center p-3">
+				<div class="login_img m-auto"></div>
+				<div class="text-muted">欢迎小可爱来到大超市！</div>
+				<div class="font_normal text-muted mt-2">
+					<a href="" class="text-muted">登录</a>&nbsp;&nbsp;<a href="" class="text-muted">注册</a>
+				</div>
+				<div class="font_normal text-danger mt-1">会员俱乐部</div>
+				<hr>
+				<div class="d-flex justify-content-around" id="ul_list">
+					<ul class="list-unstyled font_small text-muted">
+						<li>话费</li>
+						<li>机票</li>
+						<li>酒店</li>
+						<li>游戏</li>
+						<li>企业购</li>
+					</ul>
+					<ul class="list-unstyled font_small text-muted">
+						<li>加油卡</li>
+						<li>电影票</li>
+						<li>飞机票</li>
+						<li>众筹</li>
+						<li>理财</li>
+					</ul>
+					<ul class="list-unstyled font_small text-muted">
+						<li>礼品卡</li>
+						<li>超市卡</li>
+						<li>旅行</li>
+						<li>公益</li>
+						<li>水电煤</li>
+					</ul>
+				</div>
+			</div>
 		</div>
+		<div class="d-flex">
+			<!-- 秒杀框 -->
+			<div class="seckill text-center p-2">
+			<table></table>
+			<p class="text-white h1 mt-4">疯狂秒杀</p>
+			<p><img class="w-50" src="./image/seckill.jpeg" alt=""></p>
+			<p class="text-white">距离秒杀开始仅剩</p>
+			<div class="d-flex justify-content-md-around">
+				<p class="seckill_small text-white"><span id="hourr"></span></p>
+				<p class="text-white mt-3 font-weight-bold">:</p>
+				<p class="seckill_small text-white"><span id="minn"></span></p>
+				<p class="text-white mt-3 font-weight-bold">:</p>
+				<p class="seckill_small text-white"><span id="sec"></span></p>
+			</div>
+			</div>
+			<div>
+			<div class="draw p-2 text-center">
+				<div class="draw_img">
+					<img src="./image/chou.jpg" alt="" id="img_draw">
+				</div>
+				<div class="mt-2">
+					<button class="btn" onclick="draw()" id="but">开始</button>
+				</div>
+			</div>
+			<div class="timer">
+				<p>刚刚好</p>
+			</div>
+			</div>
+		</div>
+		<!-- 1楼商品 -->
 	  	<div class="floor">
 			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
 			TOP1&nbsp;&nbsp;/&nbsp;数码电子
@@ -2872,6 +2971,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- 2楼商品 -->
 		<div class="floor">
 			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
 			TOP2&nbsp;&nbsp;/&nbsp;生活家电
@@ -2980,6 +3080,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- 3楼商品 -->
 		<div class="floor">
 			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
 			TOP3&nbsp;&nbsp;/&nbsp;美妆护肤

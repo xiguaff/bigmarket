@@ -1,3 +1,5 @@
+
+	
 	/*面包屑导航中所有样式设置及媒体查询*/
     @media (min-width:1200px) {
         ul.breadcrumb{
@@ -121,8 +123,42 @@
 		background-repeat:no-repeat;
 		background-position:right center;
 		background-size:25px 25px;	
-    }
-    
+	}
+	
+	/*登录框*/
+	.login_img{
+		width:120px;height:120px;
+		border:1px solid transparent;
+		border-radius:50%;
+		background-image:url("../image/no_login.jpg");
+	}
+	.login_no{
+		width:300px;
+		background:#f5f5f5;
+		border:1px solid #f5f5f5;
+		border-radius:0.25rem;
+		position:absolute;
+		top:0px;left:810px;
+	}
+	#ul_list li{
+		margin-top:1rem;
+	}
+	
+	/*抽奖框*/
+	.draw{
+		width:220px;height:270px;
+	}
+	#but{
+		color:#ddd;
+		background:#ff5000;
+	}
+	/*logo鼠标悬停样式*/
+	#p{
+		transition:1s;
+	}
+	#p:hover{
+		transform:scale(1.1);
+	}
     /*搜索框点击样式*/
 	.inp:focus {
 		color: #495057;
@@ -132,15 +168,40 @@
 		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 	}
 
+	/*搜索框下a标签样式*/
+	.top_nav .font_small a{
+		color:#999999;
+	}
+	/*秒杀框样式*/
+	.seckill{
+		width:220px;
+		height:270px;
+		background:#ff5000;
+		/* position:absolute;
+		top:201px;left:832px; */
+		border:1px solid #ff5000;
+		border-radius: 0.5rem;
+	}
+	.seckill_small{
+		width:50px;
+		height:50px;
+		background:#000;
+		border:1px solid #000;
+		line-height:50px;
+		font-size:2rem;
+	}
+
+	.bg_nav{
+		background:#e8e8e8;
+	}
 
 	/*隐藏导航栏*/
 	.my_mr{
 		margin-top:6rem;
 		position: absolute !important;
-		top:-93px; left:200px;
+		top:-96px; left:210px;
 	}
 	.my_visible{
-		margin:6rem 0 0 0;
 		width:75%;
 	}
 	table tr td{
@@ -194,7 +255,10 @@
 	}
 	table.font_table tr td a{
 		font-size:0.75rem !important;
-    }
+	}
+	.ul_visi li{
+		background:#f5f5f5;
+	}
     
     /*轮播图样式*/
     a.carousel-control-prev,a.carousel-control-next{
@@ -233,6 +297,10 @@
 	@media (min-width:576px) and (max-width:767px) {
 
 	}
+	.img_height{
+		height:460px;
+	}
+
     /*所有楼层样式*/
 	.floor{
         margin-top:5rem;
