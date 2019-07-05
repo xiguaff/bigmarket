@@ -55,6 +55,9 @@
 					</div>
 					<div class="col-lg-8 col-md-12 text-center mt-4">
 						<input class="inp" type="text" placeholder="请输入您要搜索的内容"/>
+						<a href="">
+							<!-- <img src="./image//sou.png" alt="" class="sou_img"> -->
+						</a>
 						<div class="top_nav d-flex justify-content-center">
 							<div class="carousel" data-ride="carousel">
 								<div class="carousel-inner">
@@ -88,15 +91,15 @@
 	</div>
 	<div class="mt-5 bg_nav p-2 text-muted">
 		<ul class="list-unstyled d-flex mb-0 justify-content-center">
-			<li class="text-muted">大超市精选</li>
-			<li class="ml-5 text-muted">优惠券</li>
-			<li class="ml-5 text-muted">秒杀</li>
-			<li class="ml-5 text-muted">闪购</li>
-			<li class="ml-5 text-muted">超市生鲜</li>
-			<li class="ml-5 text-muted">超市水果</li>
-			<li class="ml-5 text-muted">全球超市</li>
-			<li class="ml-5 text-muted">超市抢购</li>
-			<li class="ml-5 text-muted">智能生活</li>
+			<li class="text-white">大超市精选</li>
+			<li class="ml-5 text-white">优惠券</li>
+			<li class="ml-5 text-white">秒杀</li>
+			<li class="ml-5 text-white">闪购</li>
+			<li class="ml-5 text-white">超市生鲜</li>
+			<li class="ml-5 text-white">超市水果</li>
+			<li class="ml-5 text-white">全球超市</li>
+			<li class="ml-5 text-white">超市抢购</li>
+			<li class="ml-5 text-white">智能生活</li>
 		</ul>
 	</div>
 	<div class="container">
@@ -2787,38 +2790,48 @@
 				</div>
 			</div>
 		</div>
-		<div class="d-flex">
+		<hr>
+		<div class="bg_happy p-2 mb-3">
+			<span class="text-white h5 ml-3">超市娱乐</span>
+		</div>
+		<div class="d-flex justify-content-around">
 			<!-- 秒杀框 -->
 			<div class="seckill text-center p-2">
-			<table></table>
-			<p class="text-white h1 mt-4">疯狂秒杀</p>
-			<p><img class="w-50" src="./image/seckill.jpeg" alt=""></p>
-			<p class="text-white">距离秒杀开始仅剩</p>
-			<div class="d-flex justify-content-md-around">
-				<p class="seckill_small text-white"><span id="hourr"></span></p>
-				<p class="text-white mt-3 font-weight-bold">:</p>
-				<p class="seckill_small text-white"><span id="minn"></span></p>
-				<p class="text-white mt-3 font-weight-bold">:</p>
-				<p class="seckill_small text-white"><span id="sec"></span></p>
+				<table></table>
+				<p class="text-white h1 mt-4">疯狂秒杀</p>
+				<p><img class="w-50 mt-3" src="./image/seckill.jpeg" alt=""></p>
+				<p class="text-white">距离秒杀开始仅剩</p>
+				<div class="d-flex justify-content-md-around mt-3">
+					<p class="seckill_small text-white"><span id="hourr"></span></p>
+					<p class="text-white mt-3 font-weight-bold">:</p>
+					<p class="seckill_small text-white"><span id="minn"></span></p>
+					<p class="text-white mt-3 font-weight-bold">:</p>
+					<p class="seckill_small text-white"><span id="sec"></span></p>
+				</div>
 			</div>
-			</div>
-			<div>
 			<div class="draw p-2 text-center">
 				<div class="draw_img">
 					<img src="./image/chou.jpg" alt="" id="img_draw">
 				</div>
-				<div class="mt-2">
+				<div class="mt-3">
 					<button class="btn" onclick="draw()" id="but">开始</button>
 				</div>
 			</div>
-			<div class="timer">
-				<p>刚刚好</p>
-			</div>
+			<div class="timer text-center p-3">
+				<p class="text-white h1 mt-2">刚刚好</p>
+				<p class="text-white">10秒挑战</p>
+				<p><img src="./image/ten.jpg" alt="" class="w-50"></p>
+				<div class="d-flex justify-content-around">
+					<p class="seckill_small text-white"><span id="mini">00</span></p>
+					<p class="seckill_small text-white"><span id="second">00</span></p>
+				</div>
+				<button class="btn" onclick="timer()" id="btn1">开始</button>
+				<button class="btn" onclick="rel()">重置</button>
 			</div>
 		</div>
 		<!-- 1楼商品 -->
-	  	<div class="floor">
-			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
+	  	<div class="floor font_color">
+			<!-- <img src="./image/lou.png" alt="" />&nbsp;&nbsp; -->
 			TOP1&nbsp;&nbsp;/&nbsp;数码电子
 		</div>
 		<div class="row m-0 mt-4">
@@ -2830,9 +2843,9 @@
 					<div class="mt-3 mr-lg-2 mr-xl-0">
 						<div class="text-muted mb-0">外星人Alienware area-51m 17.3英寸英特尔酷睿i7游戏笔记本电脑(i7-9700K 16G 256G 1T RTX2070 8G 144Hz)</div>
 						<div class="font_small text-danger">眼动仪技术,三边窄边框,144Hz屏,G-Sync电竞屏,单键RGB灯效键盘,killer网卡,RTX20系显卡,蜂窝状散热孔【晒单送蓝牙耳机或护眼台灯</div>
-						<div class="h4 text-primary mb-xl-4 mt-xl-3 mt-lg-0 mt-md-3">￥29999.9</div>
+						<div class="h4 price_color mb-xl-4 mt-xl-3 mt-lg-0 mt-md-3">￥29999.9</div>
 						<div><a href="" class="link mt-lg-0 mt-md-3">查看详情</a></div>
-						<div><a href="" class="font_small mt-2">外星人专营店</a></div>
+						<div><a href="" class="font_small mt-2 text-muted">外星人专营店</a></div>
 					</div>
 				</div>
 			</div>
@@ -2844,9 +2857,9 @@
 					<div>
 						<div class="text-muted font_normal mb-0">APPLE苹果 2018新款MacBook Pro 13.3英寸苹果笔记本电脑2017款超薄笔记本 18新款MR9U2CH/A银色-256G带Bar</div>
 						<div class="font_small text-danger mt-lg-0 mt-md-3">【下单抽2019元现金红包】京东七仓速发，当日达，次日达，极速到货，无需等待，下单送鼠标+手提包等好礼</div>
-						<div class="h4 text-primary mb-4 mt-lg-0 mt-md-3">￥14999.9</div>
+						<div class="h4 price_color mb-4 mt-lg-0 mt-md-3">￥14999.9</div>
 						<div><a href="" class="link">查看详情</a></div>
-						<div><a href="" class="font_small">apple专营店</a></div>
+						<div><a href="" class="font_small text-muted">apple专营店</a></div>
 					</div>
 				</div>
 			</div>
@@ -2873,9 +2886,9 @@
 					<div>
 						<div class="h6 mr-3 mt-3 text-muted mb-0 font_normal">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</div>
 						<div class="font_small text-danger ml-3">【大超市盛典】金属轻薄机身，微边框护眼全高清IPS屏，一键指纹全“芯”升级，薄至15.8mm</div>
-						<div class="h4 mt-3 text-primary ml-3">￥4299.00</div>
+						<div class="h4 mt-3 price_color ml-3">￥4299.00</div>
 						<div><a href="" class="link mt-3 ml-3">点击购买</a></div>
-						<div class="font_small ml-3"><a href="">荣耀大超市专营店</a></div>
+						<div class="font_small ml-3"><a href="" class="text-muted">荣耀大超市专营店</a></div>
 					</div>
 				</div>
 			</div>
@@ -2884,9 +2897,9 @@
 					<div>
 						<div class="h6 text-muted mt-xl-4 mx-lg-3 mb-0">联想(Lenovo)天逸510S英特尔酷睿i3 个人商务台式机电脑整机(i3-9100 8G 512G SSD WiFi 蓝牙 Win10)21.5英寸</div>
 						<div class="font_small text-danger ml-lg-3">【联想红六月】逸享盛夏，乐想生活，商务办公，机械的价格享受固态的速度，爆品晒单返50E卡九代新品专场</div>
-						<div class="h4 mt-xl-4 mt-lg-0 mt-md-4 text-primary ml-lg-3">￥3399.00</div>
+						<div class="h4 mt-xl-4 mt-lg-0 mt-md-4 price_color ml-lg-3">￥3399.00</div>
 						<div><a href="" class="link ml-lg-3 mt-3">点击购买</a></div>
-						<div class="font_small mx-lg-3"><a href="">联想大超市专营店</a></div>
+						<div class="font_small mx-lg-3"><a href="" class="text-muted">联想大超市专营店</a></div>
 					</div>
 					<div class="carousel mt-4 ml-3" data-ride="carousel" id="computer_carousel_right">
 						<div class="carousel-inner">
@@ -2935,9 +2948,9 @@
 					<div>
 						<div class="font-size text-muted mx-xl-3 mt-sm-4 mb-0">华为 HUAWEI P30 Pro 超感光徕卡四摄10倍混合变焦麒麟980芯片屏内指纹 8GB+128GB赤茶橘全网通版双4G手机</div>
 						<div class="font_small text-danger ml-xl-3">【购机赠大额购物卡+半年碎屏险】6.47英寸OLED曲面屏，10倍混合变焦</div>
-						<div class="h4 mx-xl-3 mt-xl-4 mt-lg-0 mt-sm-4 text-primary">￥5299.00</div>
+						<div class="h4 mx-xl-3 mt-xl-4 mt-lg-0 mt-sm-4 price_color">￥5299.00</div>
 						<div><a href="" class="link m-xl-3 mt-lg-0 mt-sm-4">查看详情</a></div>
-						<div class="font_small ml-3"><a href="">华为专营店</a></div>
+						<div class="font_small ml-3"><a href="" class="text-muted">华为专营店</a></div>
 					</div>
 				</div>
 			</div>
@@ -2964,16 +2977,16 @@
 					<div>
 						<div class="h6 text-muted mt-4 mx-3 mb-0">小米 Redmi K20Pro 4800万超广角三摄 8GB+256GB 碳纤黑 骁龙855 全网通4G 双卡双待 全面屏拍照游戏智能手机</div>
 						<div class="font_small text-danger ml-2">【新品抢购】限时白条6期免息，RedmiK20Pro骁龙855新品开抢，弹出式前置相机！</div>
-						<div class="h4 mx-2 mt-xl-4 mt-lg-0 mt-md-3 text-primary">￥3299.00</div>
+						<div class="h4 mx-2 mt-xl-4 mt-lg-0 mt-md-3 price_color">￥3299.00</div>
 						<div><a href="" class="link mx-3 mt-4">查看详情</a></div>
-						<div class="font_small mt-xl-3 ml-3"><a href="">小米专营店</a></div>
+						<div class="font_small mt-xl-3 ml-3"><a href="" class="text-muted">小米专营店</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- 2楼商品 -->
-		<div class="floor">
-			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
+		<div class="floor font_color">
+			<!-- <img src="./image/lou.png" alt="" />&nbsp;&nbsp; -->
 			TOP2&nbsp;&nbsp;/&nbsp;生活家电
 		</div>
 		<div class="row m-0 mt-4">
@@ -2985,7 +2998,7 @@
 					<div>
 						<hr>
 						<div class="font_small"><a href="" class="text-muted detail_a">侑家良品 浴室置物架 床头收纳挂篮 厨房卫生间收纳筐吊篮 小号 赠2挂钩</a></div>
-						<div class="h4 text-primary mb-0">￥19.9</div>
+						<div class="h4 price_color mb-0">￥19.9</div>
 						<div class="d-flex justify-content-md-around">
 							<a href="" class="link mt-md-0 mt-sm-2">点击购买</a>
 							<a href="" class="collect ml-md-0 ml-sm-3 mt-md-0 mt-sm-2">添加收藏</a>
@@ -3001,7 +3014,7 @@
 					<div>
 						<hr>
 						<div class="font_small"><a href="" class="text-muted detail_a">【大超市特惠购】家庭厨房日常生活家居用品用具懒人创意实用百货家用小东西 图片色</a></div>
-						<div class="h4 text-primary mb-0">￥79.9</div>
+						<div class="h4 price_color mb-0">￥79.9</div>
 						<div class="d-flex justify-content-md-around">
 							<a href="" class="link mt-md-0 mt-sm-2">点击购买</a>
 							<a href="" class="collect ml-md-0 ml-sm-3 mt-md-0 mt-sm-2">添加收藏</a>
@@ -3017,7 +3030,7 @@
 					<div>
 						<hr>
 						<div class="font_small"><a href="" class="text-muted detail_a">美简（MEIJIAN） 卫生间纸巾盒厕所免打孔家用抽纸盒卷纸盒厕纸盒防水卫生纸置物架 优雅白</a></div>
-						<div class="h4 text-primary mb-0">￥29.9</div>
+						<div class="h4 price_color mb-0">￥29.9</div>
 						<div class="d-flex justify-content-md-around">
 							<a href="" class="link mt-md-0 mt-sm-2">点击购买</a>
 							<a href="" class="collect ml-md-0 ml-sm-3 mt-md-0 mt-sm-2">添加收藏</a>
@@ -3046,7 +3059,7 @@
 							<div>
 								<hr>
 								<div class="font_small"><a href="" class="text-muted detail_a">美菱(MELING)569升 对开门双开门电冰箱 双变频一级能效 节能静音风冷无霜 两门大容量 玫瑰金 BCD-569WPCX</a></div>
-								<div class="h4 text-primary">￥2999.9</div>
+								<div class="h4 price_color">￥2999.9</div>
 								<div class="d-flex">
 									<a href="" class="link ml-4">点击购买</a>
 									<a href="" class="collect ml-4">添加收藏</a>
@@ -3071,7 +3084,7 @@
 							<div>
 								<hr>
 								<div class="font_small"><a href="" class="text-muted detail_a">奥克斯（AUX）遥控水制冷塔扇/移动空调扇/制冷风扇/水冷空调扇/小空调扇/冷风机/电风扇FT-TS45CR</a></div>
-								<div class="h4 text-primary">￥599.9</div>
+								<div class="h4 price_color">￥599.9</div>
 								<div class="d-flex">
 									<a href="" class="link ml-4">点击购买</a>
 									<a href="" class="collect ml-4">添加收藏</a>
@@ -3081,39 +3094,107 @@
 			</div>
 		</div>
 		<!-- 3楼商品 -->
-		<div class="floor">
-			<img src="./image/lou.png" alt="" />&nbsp;&nbsp;
+		<div class="floor font_color">
+			<!-- <img src="./image/lou.png" alt="" />&nbsp;&nbsp; -->
 			TOP3&nbsp;&nbsp;/&nbsp;美妆护肤
 		</div>
 		<div class="row m-0 mt-4">
 			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_first mr-md-2 mb-2">
-
+				<div class="three_first mr-md-2 mb-2 p-3">
+					<div class="text-center">
+						<img src="./image/beautiful1.jpg" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥299.00</div>
+						<div><a href="" class="detail_a text-muted">水密码补水滋养护肤11件套装（洁面泡泡+洗面奶+爽肤水+乳液+面霜+面膜）保湿化妆品套装</a></div>
+						<div class="font_small text-danger">[王凯同款熬夜安瓶上新]渗透肌肤底层,锁水滋养,全效护肤,满199减100,点击惊喜</div>
+						<div class="d-flex justify-content-around">
+							<div><a href="" class="font_normal text-muted">水密码自营店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_two mr-xl-2 mb-sm-2 mb-md-0">
-
+				<div class="three_two mr-xl-2 mb-sm-2 mb-md-0 p-3">
+					<div class="text-center">
+						<img src="./image/beautiful2.jpg" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥399.00</div>
+						<div>
+							<a href="" class="detail_a text-muted">欧莱雅小美盒 美妆护肤品彩妆套装 靓妆女王盒 科颜氏面膜、YSL反转香水+粉底液、植村秀蜜粉</a>
+						</div>
+						<div class="font_small text-danger">【7月4日-7月6日品牌秒杀，爆款大放价】1：7月5日全场额外加赠兰蔻小黑眼膜，限量100件</div>
+						<div class="d-flex justify-content-around">
+							<div><a href="" class="font_normal text-muted"> 欧莱雅自营店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_three mr-md-2 mr-xl-0 mb-sm-2 mb-xl-0">
-
+				<div class="three_three mr-md-2 mr-xl-0 mb-sm-2 mb-xl-0 p-3">
+					<div class="text-center">
+						<img src="./image/beautiful3.jpg" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥199.00</div>
+						<div><a href="" class="detail_a text-muted">自然堂（CHANDO）水润套装官方旗舰正品密集补水保湿修护水油平衡化妆品护肤品 四件套洗面奶+柔肤水+乳液+保湿霜</a></div>
+						<div class="font_small text-danger">618直降送券促销中官方直供正品带防伪</div>
+						<div class="d-flex justify-content-around mt-3">
+							<div><a href="" class="font_normal text-muted">自然堂自营店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="col-xl-4 col-md-6 p-0">
+				<div class="three_four mr-xl-2 mb-sm-2 mb-md-0 p-3">
+					<div class="text-center">
+						<img src="./image/beautiful4.png" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥249.00</div>
+						<div><a href="" class="detail_a text-muted">欧莱雅女士清润葡萄籽套装水乳化妆品套装护肤品套装女礼盒春夏精华洁面乳爽肤水乳液补水日霜保湿深层清洁 礼盒4件套A：洁面乳+乳液+膜力水+膜力霜</a></div>
+						<div class="font_small text-danger">膜力霜和复颜日霜随机发放，效果一样哦，请放心，正品保障</div>
+						<div class="d-flex justify-content-around">
+							<div><a href="" class="font_normal text-muted">欧莱雅官方店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_four mr-xl-2 mb-sm-2 mb-md-0">
-
+				<div class="three_five mr-md-2 mb-sm-2 mb-md-0 p-3">
+					<div class="text-center">
+						<img src="./image/beautiful5.jpg" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥599.00</div>
+						<div><a href="" class="detail_a text-muted">Whoo后套装套盒 补水保湿祛痘印提拉紧致修护 情人节送女友礼盒 拱辰享水妍6件套盒(补水保湿)</a></div>
+						<div class="font_small text-danger">关注店铺，领优惠券下单更优惠哦！！！</div>
+						<div class="d-flex justify-content-around mt-3">
+							<div><a href="" class="font_normal text-muted">海外美妆自营店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_five mr-md-2 mb-sm-2 mb-md-0">
-
-				</div>
-			</div>
-			<div class="col-xl-4 col-md-6 p-0">
-				<div class="three_six">
-
+				<div class="three_six p-3">
+					<div class="text-center">
+						<img src="./image/beautiful6.jpg" alt="">
+					</div>
+					<div>
+						<div class="h4 price_color">￥899.00</div>
+						<div><a href="" class="detail_a text-muted">韩国进口 后(Whoo) 拱辰享气韵生水乳2件套礼盒套装 310ml/盒 保湿滋养 调节水油平衡</a></div>
+						<div class="font_small text-danger">#补水保湿，特惠礼盒#7月4日-7月10日领券下单更优惠，买1送6，到手价只需179元，店铺部分商品2件8折3件7折</div>
+						<div class="d-flex justify-content-around mt-3">
+							<div><a href="" class="font_normal text-muted">大超市美妆店</a></div>
+							<div><button class="beaut_btn">加入购物车</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -3133,14 +3214,16 @@
 				<li class="nav-item">
 					<a href="#nav5" class="h4 nav-link" data-toggle="tab">超市精选</a>
 				</li>
-			</ul>
-			<div class="tab-content mt-2">
-				<div id="nav1" class="tab-pane active">123</div>
+		</ul>
+		<div class="tab-content mt-2">
+				<div id="nav1" class="tab-pane active">
+					
+				</div>
 				<div id="nav2" class="tab-pane">456</div>
 				<div id="nav3" class="tab-pane">789</div>
 				<div id="nav4" class="tab-pane">101112</div>
 				<div id="nav5" class="tab-pane">131415</div>
-			</div>
+		</div>
 	</div>
 	<hr>
 	<iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>

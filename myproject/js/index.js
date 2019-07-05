@@ -29,7 +29,7 @@ function conttime(){
     //获取当地时间
     var now= new Date();
     //设置截止时间
-    var end=new Date("2019/7/6 00:00:00");
+    var end=new Date("2019/7/7 00:00:00");
     //计算两个时间相差的毫秒数并转成秒数
     var diff=Math.floor((end-now)/1000);
     //计算相差的小时数
@@ -78,3 +78,42 @@ function get(){
     };
 };
 var draw=get();
+
+
+
+/* 计时框*/
+function getimer(){
+    var i=00;
+    var b=00;
+    var a=true;
+    rel=function(){
+        i=0;
+        b=0;
+        second.innerHTML=0;
+        mini.innerHTML=0;
+    };
+    return function(){
+        if(a==true){
+            timer1=setInterval(function(){
+                if(i==101){
+                    i=0;
+                    b+=1;
+                }
+                second.innerHTML=i++;
+                mini.innerHTML=b;
+                btn1.innerHTML="结束";
+                a=false;
+            },10)
+        }else if(a==false){
+            clearInterval(timer1);
+            btn1.innerHTML="开始";
+            if(second.innerHTM==0&&mini.innerHTML==10){
+                alert(`恭喜挑战成功`);
+            }else{
+                alert(`小可爱再接再厉额!`);
+            }
+            a=true;
+        };
+    };
+};
+var timer=getimer();
