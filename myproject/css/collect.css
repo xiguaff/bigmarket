@@ -1,0 +1,186 @@
+	/*面包屑导航中所有样式设置及媒体查询*/
+    @media (min-width:1200px) {
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:55%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:992px) and (max-width:1199px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:64%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:768px) and (max-width:992px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:86%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a{
+            color:#808080;
+            font-size:1rem;
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:576px) and (max-width:767px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:100%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a{
+            color:#808080;
+            font-size:0.85rem;
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+	#header ul li a{
+        color:#808080;
+    }
+    #header:after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+
+
+
+    /*用户导航栏中精灵图*/
+    #login_bg{
+		background-image:url("../image/jing.jpg");
+		width:18px;height:15px;
+		display:inline-block;
+		background-position:-59px -200px;
+	}
+	#reg_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-249px -2px;
+	}
+	#shop_bg{
+		background-image:url("../image/shop_car.png");
+		width:18px;height:16px;
+		display:inline-block;
+		background-position:-2px 0px;
+	}
+	#care_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-139px -144px;	
+	}
+	#user_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-149px -42px;
+    }
+
+    /*全屏导航栏*/
+    .top_nav{
+        background:#ff5000;
+    }
+    
+    @media (min-width:576px) {
+        .top_nav{
+            width:1300px;
+        }
+    }
+    @media (min-width:1200px){
+        .top_nav{
+            width:100%;
+        }
+    }
+    .top_nav ul{
+        margin-left:20%
+    }
+    .nav_input{
+        margin-left:250px;
+        height:30px;
+        padding:5px; 
+        box-sizing:border-box;
+        outline: none;
+    }
+
+    /*通用字体大小*/
+	.font_small{
+		font-size:0.75rem;
+    }
+    
+    /*内容左侧所有ul样式*/
+    ul.font_small li:not(:first-child){
+        margin-top:0.75rem;
+    }
+    ul.font_small li a{
+        color:#777777;
+    }
+
+    ul.font_small li a:hover{
+        color:#f00;
+    }
+
+    /*主体样式*/
+    .nav_middle{
+        border:1px solid #e8e8e8;
+        border-radius:0.25rem;
+        height:75px;
+    }
+    @media (min-width:576px){
+        .ul_width{
+            width:520px;
+        }
+        .input_width{
+            width:268px;
+        }
+    }
+    /*设置搜索框宽度*/
+    /* .form-control{
+        width:75% !important;
+    } */
+
+
+    .sub_a{
+        display: inline-block;
+        width:70px;height:25px;
+        background:#ff5000;
+        color:#fff;
+        text-align: center;
+    }
+    .sub_a:hover{
+        color:#fff;
+    }
+    /*主体内容样式*/
+    .body_middle{
+        border:1px solid #e8e8e8;
+        border-radius:0.25rem;
+    }
