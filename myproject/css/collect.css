@@ -184,3 +184,83 @@
         border:1px solid #e8e8e8;
         border-radius:0.25rem;
     }
+
+    /*收藏夹商品列表*/
+    .list_pro{
+        height:340px;
+        border:1px solid #e8e8e8;
+    }
+    .list_border{
+        border-right:1px solid #e8e8e8;
+        height:38px;
+    }
+    div.list_ul{
+        display:none;
+        position: absolute;
+        top:-2px;left:0px;
+        line-height:30px;
+    }
+    div.list_ul a{
+        display:inline-block;
+        width:69px;
+        height:30px;
+        background:#999;
+        color:#fff;
+        font-size:0.75rem;
+    }
+    div.list_ul a:hover{
+        text-decoration:none;
+    }
+    div.list_pro:hover .list_ul{
+        display:block;
+    }
+
+    /*价格样式*/
+    .price_color{
+		color:#ff5000 !important;
+    }
+    
+    /*加入购物车样式*/
+    .car_a{
+        display: inline-block;
+        width:100px;
+        height:30px;
+        border:1px solid #e8e8e8;
+        line-height:30px;
+        text-align: center;
+        border-radius:0.2rem;
+        color:#777;
+        margin-top:0.25rem;
+    } 
+    .car_a:hover{
+        text-decoration:none;
+        color:#f00;
+    }
+
+    /*收藏商品详情链接样式*/
+    .detail_a:hover{
+        text-decoration:none;
+        color:#f00 !important;
+    }
+
+    /*推荐商品样式*/
+    .recom_list{
+        width:925px;
+        border:1px solid #e8e8e8;
+    }
+    .recom_btn{
+        display:inline-block;
+        width:75%;
+        height:30px;
+        color:#ff9000;
+        background:transparent;
+        outline:none;
+        border:1px solid #ff5000;
+        line-height:30px;
+        font-size:0.85rem;
+        border-radius:0.25rem;
+    }
+    .recom_btn:hover{
+        text-decoration:none;
+        color:#f00;
+    }

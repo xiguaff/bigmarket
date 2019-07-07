@@ -1,0 +1,171 @@
+	/*面包屑导航中所有样式设置及媒体查询*/
+    @media (min-width:1200px) {
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:55%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:992px) and (max-width:1199px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:64%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:768px) and (max-width:992px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:86%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a{
+            color:#808080;
+            font-size:1rem;
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+    @media (min-width:576px) and (max-width:767px){
+        ul.breadcrumb{
+		    background-color:#fff;
+		    width:100%;
+		    float:right;
+        }
+        li.breadcrumb-item+ li.breadcrumb-item::before{
+            content:"丨";
+        }
+        #header ul li a{
+            color:#808080;
+            font-size:0.85rem;
+        }
+        #header ul li a:hover{
+            color:#f00;
+            text-decoration:none;
+        }
+    }
+	#header ul li a{
+        color:#808080;
+    }
+    #header:after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+
+
+
+    /*用户导航栏中精灵图*/
+    #login_bg{
+		background-image:url("../image/jing.jpg");
+		width:18px;height:15px;
+		display:inline-block;
+		background-position:-59px -200px;
+	}
+	#reg_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-249px -2px;
+	}
+	#shop_bg{
+		background-image:url("../image/shop_car.png");
+		width:18px;height:16px;
+		display:inline-block;
+		background-position:-2px 0px;
+	}
+	#care_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-139px -144px;	
+	}
+	#user_bg{
+		background-image:url("../image/jing.jpg");
+		width:17px;height:15px;
+		display:inline-block;
+		background-position:-149px -42px;
+    }
+
+
+        /*全屏导航栏*/
+        .top_nav{
+            background:#ff5000;
+        }
+        
+        @media (min-width:576px) {
+            .top_nav{
+                width:1300px;
+            }
+        }
+        @media (min-width:1200px){
+            .top_nav{
+                width:100%;
+            }
+        }
+        .top_nav ul{
+            margin-left:20%
+        }
+        .nav_input{
+            margin-left:250px;
+            height:30px;
+            padding:5px; 
+            box-sizing:border-box;
+            outline: none;
+        }
+    
+        /*通用字体大小*/
+        .font_small{
+            font-size:0.75rem;
+        }
+
+
+/*购物车导航栏*/
+.nav_car{
+    width:1110px;height:50px;
+    border:1px solid #f00;
+    line-height:50px;
+}
+.nav_car input{
+    margin-left:1rem;
+    margin-right:0.5rem;
+}
+.nav_car span:nth-child(2){
+    margin-left:7rem;
+}
+.nav_car span:nth-child(3){
+    margin-left:25rem;
+}
+.nav_car span:nth-child(4){
+    margin-left:5rem;
+}
+.nav_car span:nth-child(5){
+    margin-left:8rem;
+}
+.nav_car span:nth-child(6){
+    margin-left:4rem;
+}
+.car_list{
+    width:1110px;height:250px;
+    border:1px solid #e8e8e8;
+    border-top:2px solid #808080;
+}

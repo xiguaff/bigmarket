@@ -1,3 +1,13 @@
+//用户中心跳转首页传递uid参数
+function skipindex(){
+	//获取前一个网页？后面的参数
+	var url=new URLSearchParams(location.search);
+	//获取参数中uid
+	var uid=url.get("uid");
+	location.href="index.html?uid="+uid;
+}
+
+
 
 function skiplogin(){
     //获取前一个网页？后面的参数
@@ -24,12 +34,31 @@ function skipuserlist(){
     };
 };
 
+function skipcollect(){
+    var url=new URLSearchParams(location.search);
+    var uid=url.get("uid");
+    if(uid!==null){
+        location.href="collect.html?uid="+uid;
+    }else{
+        alert("小可爱请先登录哟");
+    }
+}
+
+function skipcar(){
+    var url=new URLSearchParams(location.search);
+    var uid=url.get("uid");
+    if(uid!==null){
+        location.href="productcar.html?uid="+uid;
+    }else{
+        alert("小可爱请先登录哟");
+    }
+}
 /* 创建秒杀框函数*/
 function conttime(){
     //获取当地时间
     var now= new Date();
     //设置截止时间
-    var end=new Date("2019/7/7 00:00:00");
+    var end=new Date("2019/7/10 00:00:00");
     //计算两个时间相差的毫秒数并转成秒数
     var diff=Math.floor((end-now)/1000);
     //计算相差的小时数
