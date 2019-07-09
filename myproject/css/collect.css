@@ -235,6 +235,7 @@
     .car_a:hover{
         text-decoration:none;
         color:#f00;
+        border:1px solid #f00;
     }
 
     /*收藏商品详情链接样式*/
