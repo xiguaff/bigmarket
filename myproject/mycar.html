@@ -10,33 +10,6 @@
 	<script type="text/javascript" src="./js/popper.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <title>购物车页面</title>
-    <script>
-        function btn_add(){
-            var num=Number(input1.value);
-            input1.value=num+=1;
-            price_1.innerHTML=price_2.innerHTML*input1.value;
-        }
-        function btn_less(){
-            var num=Number(input1.value);
-            input1.value=num-=1;
-            price_1.innerHTML-=price_2.innerHTML;
-            // if(input1.value==0){
-            //     btn1.disabled="disabled";
-            // }else{
-            //     btn1.disabled="";
-            // }
-        }
-        function btn_add_1(){
-            var num=Number(input2.value);
-            input2.value=num+=1;
-            price_4.innerHTML=price_3.innerHTML*num;
-        }
-        function btn_less_4(){
-            var num=Number(input2.value);
-            input2.value=num-=1;
-            price_4.innerHTML-=price_3.innerHTML;
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -86,7 +59,7 @@
         </ul>
     </div>
     <div class="container mt-5">
-        <div>
+        <div id="list">
             <div>
                 <p class="h4 text-danger">全部商品</p><span></span>
             </div>
@@ -105,7 +78,7 @@
             <div class="car_list mt-2">
                 <div class="row m-0">
                     <div class="col-6 p-0">
-                        <div class="d-flex p-3">
+                        <div class="d-flex p-3 pl-2">
                             <input type="checkbox" class="mt-3">
                             <div class="d-flex">
                                 <img src="./image/pro_phone.jpg" alt="">
@@ -115,13 +88,13 @@
                     </div>
                     <div class="col-6 p-0">
                         <div class="p-4 d-flex">
-                            <p class="ml-4 price_color">￥<span id="price_2">5299.00</span></p>
+                            <p class="ml-3 price_color">￥5299.00</p>
                             <div class="ml-5 list_width">
-                                <button class="btn_list btn_rela1" onclick="btn_less()" id="btn1">-</button>
-                                <input type="text" class="input_list" value="1" id="input1">
-                                <button class="btn_list btn_rela2" onclick="btn_add()">+</button>                               
+                                <button class="btn_list btn_rela1">-</button>
+                                <input type="text" class="input_list" value="1">
+                                <button class="btn_list btn_rela2">+</button>                               
                             </div>
-                            <p class="price_color">￥<span id="price_1">5299.00</span></p>
+                            <p class="price_color ml-1" style="width:80px;">￥5299.00</p>
                             <div class="ml-4">
                                 <p class="font_small">移动到我的关注</p>
                                 <p class="font_small">删除</p>
@@ -146,14 +119,14 @@
                         </div> 
                     </div>
                     <div class="col-6 p-0">
-                        <div class="p-4 d-flex">
-                            <p class="ml-4 price_color">￥<span id="price_3">4299.00</span></p>
+                        <div class="p-3 d-flex">
+                            <p class="ml-4 price_color">￥4299.00</p>
                             <div class="ml-5 list_width">
-                                <button class="btn_list btn_rela1" onclick="btn_less_4()">-</button>
-                                <input type="text" class="input_list" value="1" id="input2">
-                                <button class="btn_list btn_rela2" onclick="btn_add_1()">+</button>                               
+                                <button class="btn_list btn_rela1">-</button>
+                                <input type="text" class="input_list" value="1">
+                                <button class="btn_list btn_rela2">+</button>                               
                             </div>
-                            <p class="price_color">￥<span id="price_4">4299.00</span></p>
+                            <p class="price_color ml-1" style="width:80px;">￥4299.00</p>
                             <div class="ml-4">
                                 <p class="font_small">移动到我的关注</p>
                                 <p class="font_small">删除</p>
@@ -162,7 +135,155 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-3 ml-3">
+                <input type="checkbox">
+                <span>荣耀自营店</span>
+            </div>
+            <div class="car_list mt-2">
+                <div class="row m-0">
+                    <div class="col-6 p-0">
+                        <div class="d-flex p-3">
+                            <input type="checkbox" class="mt-3">
+                            <div class="d-flex">
+                                <img src="./image/pro_1.jpg" alt="">
+                                <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="p-3 d-flex">
+                            <p class="ml-4 price_color">￥4299.00</p>
+                            <div class="ml-5 list_width">
+                                <button class="btn_list btn_rela1">-</button>
+                                <input type="text" class="input_list" value="1">
+                                <button class="btn_list btn_rela2">+</button>                               
+                            </div>
+                            <p class="price_color ml-1" style="width:80px;">￥4299.00</p>
+                            <div class="ml-4">
+                                <p class="font_small">移动到我的关注</p>
+                                <p class="font_small">删除</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 ml-3">
+                    <input type="checkbox">
+                    <span>荣耀自营店</span>
+                </div>
+                <div class="car_list mt-2">
+                    <div class="row m-0">
+                        <div class="col-6 p-0">
+                            <div class="d-flex p-3">
+                                <input type="checkbox" class="mt-3">
+                                <div class="d-flex">
+                                    <img src="./image/pro_1.jpg" alt="">
+                                    <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-6 p-0">
+                            <div class="p-3 d-flex">
+                                <p class="ml-4 price_color">￥4299.00</p>
+                                <div class="ml-5 list_width">
+                                    <button class="btn_list btn_rela1">-</button>
+                                    <input type="text" class="input_list" value="1">
+                                    <button class="btn_list btn_rela2">+</button>                               
+                                </div>
+                                <p class="price_color ml-1" style="width:80px;">￥4299.00</p>
+                                <div class="ml-4">
+                                    <p class="font_small">移动到我的关注</p>
+                                    <p class="font_small">删除</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="car_cal mt-4 d-flex justify-content-between">
+                <div class="d-flex ml-3">
+                    <div class="input_move">
+                        <input type="checkbox"> 
+                    </div>
+                    <div>
+                        <span class="font_small ml-2">全选</span>
+                        <span><a href="" class="text-muted font_small ml-2">删除选中商品</a></span>
+                        <span><a href="" class="text-muted font_small ml-2">移到关注</a></span>
+                        <span><a href="" class="text-muted font_small ml-2">清理购物车</a></span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <p class="font_small mr-3">已选择&nbsp;<span class="text-danger">0</span>&nbsp;件商品</p>
+                    <p class="text-muted mr-3">总价：<span class="text-danger font-weight-bold"></span></p>
+                    <a href="" class="a_count">去&nbsp;结&nbsp;算</a>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
         </div>
     </div>
+<script>
+                //计算默认总价
+                //获取每个保存小计的元素 
+                var div=document.getElementById("list");
+                var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
+                //遍历获取到的集合并将总价累加到变量中
+                var subtotal=0;
+                for(var price of price_1){
+                    subtotal+=parseFloat(price.innerHTML.slice(1));
+                }
+                //获取保存总价的元素
+                var div=document.getElementsByClassName("car_cal");
+                var count_price=div[0].querySelector("div:last-child p.text-muted span");
+                //计算总价
+                count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
+
+
+
+    //获取能够找到button的父元素集合
+    var divs=document.getElementsByClassName("list_width");
+    //遍历集合
+    for(var i=0;i<divs.length;i++){
+        //通过遍历到的每个元素作为寻找button的父元素
+        var btns=divs[i].getElementsByTagName("button");
+        //遍历获取的button集合，获取每个button元素
+        for(var btn of btns){
+            //为每个button绑定事件
+            btn.onclick=function(){
+                var btn=this;
+                //获取两个按钮中间inpu的元素
+                var input=btn.parentNode.children[1];
+                //将input中value的值转为数值
+                var num=Number(input.value);
+                //判断如果点击+号，则num的值加1；否则减1
+                if(btn.innerHTML=="+"){
+                    num++;
+                }else if(num>1){  //判断当num的值大于1时，可以减1，等于或者小于1时，则不能执行减1；
+                    num--;
+                }
+                //将执行完的num在赋值给input.value
+                input.value=num;
+                /*计算小计*/
+                //获取能够找到单价的父元素集合
+                var div_1=btn.parentNode.parentNode;
+                //将单价转为数值
+                var price=parseFloat(div_1.children[0].innerHTML.slice(1));
+                div_1.children[2].innerHTML=`￥${(price*num).toFixed(2)}`;
+                //计算总价
+                //获取每个保存小计的元素          
+                var div=document.getElementById("list");
+                var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
+                //遍历获取到的集合并将总价累加到变量中
+                var subtotal=0;
+                for(var price of price_1){
+                    subtotal+=parseFloat(price.innerHTML.slice(1));
+                }
+                //获取保存总价的元素
+                var div=document.getElementsByClassName("car_cal");
+                var count_price=div[0].querySelector("div:last-child p.text-muted span");
+                //计算总价
+                count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
+            };
+        };
+    };
+</script>
 </body>
 </html>

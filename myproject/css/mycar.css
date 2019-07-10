@@ -200,7 +200,28 @@
 }
 
 
-    /*价格样式*/
-    .price_color{
-		color:#ff5000 !important;
-    }
+/*价格样式*/
+.price_color{
+	color:#ff5000 !important;
+}
+
+/*结算框样式*/
+.car_cal{
+    width:1110px;height:60px;
+    border:1px solid #e8e8e8;
+    line-height:60px;
+}
+.input_move{
+    margin-top:2px;
+}
+.a_count{
+    width:100px;height:60px;
+    color:#fff;
+    background:#ff5000;
+    text-align: center;
+    font-weight:bold;
+}
+.a_count:hover{
+    text-decoration:none;
+    color:#fff;
+}

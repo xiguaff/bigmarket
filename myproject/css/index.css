@@ -572,3 +572,9 @@
 	height:400px;
 	border:1px solid #ff9000
 }
+
+/*手风琴样式*/
+.card_list{
+	width:1108px;height:400px;
+	border:1px solid #f00;
+}
