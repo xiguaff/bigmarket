@@ -225,3 +225,18 @@
     text-decoration:none;
     color:#fff;
 }
+
+/*推荐商品样式*/
+.car_recom{
+    width:1110px;height:270px;
+    border:1px solid #e8e8e8;
+}
+.car_recom div p span{
+    margin-left:7rem;
+}
+.car_recom div p span a img{
+    transition:all 0.5s linear;
+}
+.car_recom div p span a:hover img{
+    transform:scale(1.3);
+}

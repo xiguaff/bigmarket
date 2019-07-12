@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/mycar.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/popper.min.js"></script>
-	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/mycar.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/popper.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <title>购物车页面</title>
 </head>
 <body>
@@ -64,7 +64,7 @@
                 <p class="h4 text-danger">全部商品</p><span></span>
             </div>
             <div class="nav_car">
-                <input type="checkbox">全选
+                <input type="checkbox" data-input="int">全选
                 <span>商品</span>
                 <span>单价</span>
                 <span>数量</span>
@@ -81,7 +81,7 @@
                         <div class="d-flex p-3 pl-2">
                             <input type="checkbox" class="mt-3">
                             <div class="d-flex">
-                                <img src="./image/pro_phone.jpg" alt="">
+                                <img src="../image/pro_phone.jpg" alt="">
                                 <p class="mt-2 text-muted">华为 HUAWEI P30 Pro 超感光徕卡四摄10倍混合变焦麒麟980芯片屏内指纹 8GB+128GB赤茶橘全网通版双4G手机</p>
                             </div>
                         </div> 
@@ -113,7 +113,7 @@
                         <div class="d-flex p-3">
                             <input type="checkbox" class="mt-3">
                             <div class="d-flex">
-                                <img src="./image/pro_1.jpg" alt="">
+                                <img src="../image/pro_1.jpg" alt="">
                                 <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
                             </div>
                         </div> 
@@ -145,7 +145,7 @@
                         <div class="d-flex p-3">
                             <input type="checkbox" class="mt-3">
                             <div class="d-flex">
-                                <img src="./image/pro_1.jpg" alt="">
+                                <img src="../image/pro_1.jpg" alt="">
                                 <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
                             </div>
                         </div> 
@@ -177,7 +177,7 @@
                             <div class="d-flex p-3">
                                 <input type="checkbox" class="mt-3">
                                 <div class="d-flex">
-                                    <img src="./image/pro_1.jpg" alt="">
+                                    <img src="../image/pro_1.jpg" alt="">
                                     <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
                                 </div>
                             </div> 
@@ -217,25 +217,60 @@
                     <a href="" class="a_count">去&nbsp;结&nbsp;算</a>
                 </div>
             </div>
-            <br><br><br><br><br><br><br>
+        </div>
+        <div class="mt-5 mb-3 text-muted font_small text-center">==看看其他人还喜欢什么商品==</div>
+        <div class="car_recom d-flex justify-content-around">
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom1.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">华为 HUAWEI P30 Pro 超感光徕卡四摄10倍混合变焦麒麟980芯片屏内指纹 </p>
+                <p class="price_color font_small mb-1">￥5488.00</p>
+                <p class="text-muted font_small">45150人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom2.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">华为 HUAWEI P30 超感光徕卡三摄麒麟980AI智能芯片全面屏屏内指纹版手机</p>
+                <p class="price_color font_small mb-1">￥4288.00</p>
+                <p class="text-muted font_small">68146人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom3.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">华为 HUAWEI Mate 20 Pro (UD)屏内指纹版麒麟980芯片全面屏超大广角徕卡</p>
+                <p class="price_color font_small mb-1">￥5099.00</p>
+                <p class="text-muted font_small">11415人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom4.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">华为 HUAWEI Mate 20 RS 保时捷设计 麒麟980芯片全面屏超大广角徕卡三摄</p>
+                <p class="price_color font_small mb-1">￥12999.00</p>
+                <p class="text-muted font_small">1415人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
         </div>
     </div>
 <script>
-                //计算默认总价
-                //获取每个保存小计的元素 
-                var div=document.getElementById("list");
-                var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
-                //遍历获取到的集合并将总价累加到变量中
-                var subtotal=0;
-                for(var price of price_1){
-                    subtotal+=parseFloat(price.innerHTML.slice(1));
-                }
-                //获取保存总价的元素
-                var div=document.getElementsByClassName("car_cal");
-                var count_price=div[0].querySelector("div:last-child p.text-muted span");
-                //计算总价
-                count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
-
+    (function(){
+        //计算默认总价
+        //获取每个保存小计的元素 
+        var div=document.getElementById("list");
+        var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
+        //遍历获取到的集合并将总价累加到变量中
+        var subtotal=0;
+        for(var price of price_1){
+             subtotal+=parseFloat(price.innerHTML.slice(1));
+        }
+        //获取保存总价的元素
+        var div=document.getElementsByClassName("car_cal");
+        var count_price=div[0].querySelector("div:last-child p.text-muted span");
+        //计算总价
+        count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
+    })();
 
 
     //获取能够找到button的父元素集合
@@ -284,6 +319,67 @@
             };
         };
     };
+   
+    (function(){
+         //获取需要触发事件的元素
+        var input=document.querySelector("#list [data-input=int]");
+
+        //为input绑定事件处理函数
+        input.onclick=function(){
+             //获取触发事件时的元素
+            var input=this;
+            //寻找需要修改的元素
+            var ints=document.querySelectorAll("div.car_list div.d-flex input.mt-3");
+            //遍历获得的元素集合
+            for(var int of ints){
+                //并修改每个元素
+                ////获取当input选中时需要改变背景色的div
+                var span=document.getElementsByClassName("car_cal")[0].lastElementChild.children[0].children[0];
+                var div=int.parentNode.parentNode.parentNode.parentNode;
+                int.checked=input.checked;
+                //判断当前input被全选按钮选中时，改变背景色
+                if(int.checked=input.checked){
+                    i=ints.length;
+                    div.style.backgroundColor="#eeeeee";
+                    span.innerHTML=i;
+                }else{
+                    //否则div没有背景色
+                    div.style.backgroundColor="";
+                    span.innerHTML=0;
+                    i=0;
+                };
+            };
+        };
+        var i=0;
+        //下面的每个input都会影响全选按钮
+        var ints=document.querySelectorAll("div.car_list div.d-flex input.mt-3");
+        for(var int of ints){
+            int.onclick=function(){
+                var int=this;
+                var span=document.getElementsByClassName("car_cal")[0].lastElementChild.children[0].children[0];
+                //获取当input点击时需要改变背景色的div
+                var div=int.parentNode.parentNode.parentNode.parentNode;
+                //判断下面如果有一个input没有被选中，则上面的全选按钮也取消被选中
+                if(int.checked==false){
+                    i--;
+                    input.checked=false;
+                    div.style.backgroundColor=""; //当前input没有被选中时，div没有背景色
+                    span.innerHTML=i;
+                }else{
+                    i++;
+                    span.innerHTML=i;
+                    //如果下面则input一个一个全部选中则上面的全选按钮也选中;
+                    div.style.backgroundColor="#eeeeee";  //当前input被选中时，div更改背景色
+                    //寻找下面input是否有未被选中的
+                    var uninput=document.querySelector("div.car_list div.d-flex input.mt-3:not(:checked)");
+                    //判断是否获取未被选中的元素，如果未获取到则全选按钮被选中
+                    if(uninput===null){
+                        input.checked=true;
+                    };
+                };
+            };
+        };
+    })();
 </script>
 </body>
 </html>

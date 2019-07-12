@@ -9,10 +9,10 @@
 		display:table;
 	}
 	#contanier{
-		width:450px;
+		width:570px;
 		background-color:rgb(0,0,0,.1);
 		margin-top:80px;
-		margin-left:70%;
+		margin-left:68%;
 		padding:20px;
 	}
 	.img1{
@@ -29,7 +29,7 @@
 		font-size:30px;
 	}
 	.uname,.upwd,.pwd,.email,.phone{
-		width:60%;height:37px;
+		width:265px;height:37px;
 		margin-top:20px;
 		padding:5px 10px;
 		box-sizing:border-box;
@@ -71,7 +71,7 @@
 		color:#fff;
 	}
 	#view{
-		width:60%;height:35px;
+		width:265px;height:35px;
 		border:0;
 		border-radius:3px;
 		font-size:23px;
@@ -197,3 +197,5 @@
 	.img1 a{
 		text-decoration:none;
 	} 
+
+

@@ -14,6 +14,7 @@ var app=express();
 app.listen(1994);
 
 //托管静态资源目录
+app.use(express.static("myproject/html"));
 app.use(express.static("myproject"));
 //app.use(express.static("myproject/image"));
 //app.use(express.static("myproject/js"));

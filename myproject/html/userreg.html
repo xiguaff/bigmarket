@@ -3,12 +3,12 @@
  <head>
   <meta charset="UTF-8">
   <title>用户注册</title>
-	 <link rel="stylesheet" href="./css/mypro.css" />
+	 <link rel="stylesheet" href="../css/mypro.css" />
  </head>
  <body>
 	<div class="img1">
 		<a href="index.html">
-      <img src="./image/logo.png" alt="" />
+      <img src="../image/logo.png" alt="" />
 		  <b>你想要的我都有</b>
     </a>
 	</div>
@@ -19,22 +19,27 @@
 				<p>新用户注册</p>
 			</div>
 			<div>
+				<span>*</span>
 				<input class="uname" type="text" placeholder="请输入用户名" id="uname" onfocus="getname()" onblur="check_uname()"/>
 				<span id="msg1"></span>
 			</div>
 			<div>
+				<span>*</span>
 				<input class="upwd" type="password" placeholder="请输入密码" id="upwd" onfocus="getupwd()" onblur="check_upwd()"/>
 				<span id="msg2"></span>
 			</div>
 			<div>
+				<span>*</span>
 				<input class="pwd" type="password" placeholder="确认密码" id="pwd" onfocus="getpwd()" onblur="check_pwd()"/>
 				<span id="msg3"></span>
 			</div>
 			<div>
+				<span>*</span>
 				<input class="email" type="text" placeholder="请输入邮箱" id="email" onfocus="getemail()" onblur="check_email()"/>
 				<span id="msg4"></span>
 			</div>
 			<div>
+				<span>*</span>
 				<input class="phone" type="phone" placeholder="请输入电话号码" id="phone" onfocus="getphone()" onblur="check_phone()"/>
 				<span id="msg5"></span>
 			</div>
@@ -53,39 +58,39 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		//用户名输入框获取焦点/失去焦点
-		function getname(){
-			msg1.innerHTML="用户名6~12位";
+		 //用户名输入框获取焦点/失去焦点
+	 	function getname(){
+		 	msg1.innerHTML="用户名6~12位";
 		};
-		function check_uname(){
-			if(!uname.value){
-				msg1.innerHTML="用户名不能为空";
-			}else if(uname.value.length<=12&&uname.value.length>=6){
-				msg1.innerHTML="格式正确";
-			}else{
-				msg1.innerHTML="格式错误";
-			};
-			//判断用户名是否可用
-			//创建xhr异步对象
-			var xhr=new XMLHttpRequest();
-			//绑定监听，获取响应数据
-			xhr.onreadystatechange=function(){
-				if(xhr.readyState==4&&xhr.status==200){
-					console.log(123);
-					var result=xhr.responseText;
-					if(result==1){
-						msg1.innerHTML="用户名已存在";
-					}else{
-						msg1.innerHTML="用户名可用";
-					};
-				};
-			};
-			//创建请求
-			xhr.open("get","/mypro/v5/check/"+uname.value,true);
-			//发送请求
-			xhr.send();
-		};
-		//密码输入框获取焦点/失去焦点
+		 function check_uname(){
+		 	if(!uname.value){
+		 		msg1.innerHTML="用户名不能为空";
+		 	}else if(uname.value.length<=12&&uname.value.length>=6){
+		 		msg1.innerHTML="格式正确";
+		 	}else{
+		 		msg1.innerHTML="格式错误";
+	 	};
+		 	//判断用户名是否可用
+		 	//创建xhr异步对象
+		 	var xhr=new XMLHttpRequest();
+		 	//绑定监听，获取响应数据
+	 		xhr.onreadystatechange=function(){
+		 		if(xhr.readyState==4&&xhr.status==200){
+		 			console.log(123);
+		 			var result=xhr.responseText;
+		 			if(result==1){
+		 				msg1.innerHTML="用户名已存在";
+		 			}else{
+		 				msg1.innerHTML="用户名可用";
+		 			};
+		 		};
+		 	};
+		 	//创建请求
+		 	xhr.open("get","/mypro/v5/check/"+uname.value,true);
+	 		//发送请求
+		 	xhr.send();
+		 };
+		// 密码输入框获取焦点/失去焦点
 		function getupwd(){
 			msg2.innerHTML="密码长度6~12位";
 		};

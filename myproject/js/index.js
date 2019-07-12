@@ -58,7 +58,7 @@ function conttime(){
     //获取当地时间
     var now= new Date();
     //设置截止时间
-    var end=new Date("2019/7/10 00:00:00");
+    var end=new Date("2019/7/14 00:00:00");
     //计算两个时间相差的毫秒数并转成秒数
     var diff=Math.floor((end-now)/1000);
     //计算相差的小时数
@@ -87,7 +87,7 @@ function conttime(){
 
 //抽奖框
 function get(){
-    var arr=["./image/1f_1.jpg","./image/1f_2.jpg","./image/pro_honor2.jpg","./image/pro_honor3.jpg","./image/pro_1.jpg","./image/pro_2.jpg","./image/pro_phone.jpg","./image/phone_mi1.jpg","./image/phone_mi2.jpg","./image/phone_mi3.png"]
+    var arr=["../image/1f_1.jpg","../image/1f_2.jpg","../image/pro_honor2.jpg","../image/pro_honor3.jpg","../image/pro_1.jpg","../image/pro_2.jpg","../image/pro_phone.jpg","../image/phone_mi1.jpg","../image/phone_mi2.jpg","../image/phone_mi3.png"]
     var i=true;
     var timer;
     return function(){
