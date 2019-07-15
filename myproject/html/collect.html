@@ -54,8 +54,33 @@
         <ul class="list-unstyled text-white d-flex">
             <li class="h3"><a href="javascript:skipindex()" class="text-white">我的大超市</a></li>
             <li class="ml-5 mt-2">首页</li>
-            <li class="ml-5 mt-2">账户设置</li>
-            <li class="ml-5 mt-2">评价</li>
+            <li class="ml-5 mt-2 position-relative px-1">
+                账户设置<div class="div_indicate"></div>
+                <ul>
+                    <li>个人信息 </li>
+                    <li>账户安全</li>
+                    <li>我的尺码</li>
+                    <li>账号绑定</li>
+                    <li>收货地址</li>
+                    <li>健康档案</li>
+                    <li>分享绑定</li>
+                    <li>邮件订阅</li>
+                    <li>授权管理</li>
+                    <li>我的银行卡</li>
+                    <li>增票资质</li>
+                    <li>企业发票</li>
+                    <li>采购需求单</li>
+                </ul>
+            </li>
+            <li class="ml-4 mt-2 position-relative px-1">
+                评价<div class="div_indicate"></div>
+                <ul>
+                    <li>待评价</li>
+                    <li>服务追评</li>
+                    <li>待追评</li>
+                    <li>已评价</li>
+                </ul>
+            </li>
             <li class="ml-5 mt-2">消息</li>
             <li><input type="text" placeholder="搜索商品" class="nav_input mt-2"></li>
         </ul>
@@ -279,5 +304,29 @@
     </div>
     <hr>
     <iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
+    <script>
+        //找到触发事件的元素
+        // var lis=document.getElementsByClassName("position-relative px-1");
+        // //为获得的元素绑定事件处理函数
+        // for(var li of lis){
+        //     li.onclick=function(){
+        //         var li=this;
+        //         //寻找需要修改的元素
+        //         var ul=li.children[1];
+        //         //修改元素
+        //         //先获取元素的样式
+        //         // var style=getComputedStyle(ul);
+        //         //然后修改元素，判断元素的状态否隐藏
+        //         if(ul.className=="open"){
+        //             ul.className="";
+        //          }else{
+        //             //寻找是否其他元素处于显示状态
+        //             var open=document.querySelector("div.top_nav ul li ul.open")
+        //             open!==null&&(open.className="");
+        //             ul.className="open";
+        //          }
+        //     };
+        // };
+    </script>
 </body>
 </html>

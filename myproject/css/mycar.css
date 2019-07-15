@@ -235,8 +235,79 @@
     margin-left:7rem;
 }
 .car_recom div p span a img{
-    transition:all 0.5s linear;
+    transition:all 0.3s linear;
 }
 .car_recom div p span a:hover img{
     transform:scale(1.3);
+}
+
+/*复选框样式*/
+.int_style{
+    width:15px;
+    height:15px;
+}
+
+/*p标签高度*/
+.p_height{
+    height:36px;
+    overflow:hidden;
+}
+
+/*底部猜你喜欢框样式*/
+.car_bottom{
+    width:277.5px;
+    height:300px;
+    border:1px dashed #e8e8e8;
+}
+.car_bottom:hover{
+    border:1px solid #f00;
+}
+.div_absolu{
+    position:absolute;
+    top:0px;
+    background:#fff;
+}
+.dis_a{
+    display:inline-block;
+    width:100px;
+    height:30px;
+    border:1px solid #e8e8e8;
+    border-radius:0.25rem;
+    text-align: center;
+    line-height: 30px;
+}
+.dis_a:hover{
+    text-decoration:none;
+    background:#ff5000;
+    color:#fff !important;
+}
+.dis_a:focus{
+    background:#f00;
+    color:#fff !important;
+    border:1px solid #f00;
+}
+.clear_abs{
+    height:300px;
+}
+.car_a{
+    display:inline-block;
+    width:130px;height:30px;
+    border:1px solid #e8e8e8;
+    border-radius:0.25rem;
+    text-align:center;
+    font-size:0.85rem;
+    line-height:28px;
+    color:#aaa;
+    transition:0.5s;
+}
+.active{
+    background:#f00;
+    color:#fff !important;
+    border:1px solid #f00; 
+}
+.car_a:hover{
+    border:1px solid #f00 !important;
+    color:#f00;
+    text-decoration:none;
+    transform:scale(1.1);
 }

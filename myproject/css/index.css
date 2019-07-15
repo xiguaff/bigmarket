@@ -569,12 +569,40 @@
 
 /*猜你喜欢样式*/
 .love_pro{
-	height:400px;
+	height:380px;
 	border:1px solid #ff9000
 }
 
 /*手风琴样式*/
-.card_list{
-	width:1108px;height:400px;
-	border:1px solid #f00;
+.card-list{
+	margin-top:1rem;
+	width:1110px;height:40px;
+	line-height:40px;
+	color:#ff5000;
+	font-weight:bold;
+	font-size:1.5rem;
+	cursor:pointer;
+}
+.card-list+div{
+	margin-top:0.75rem;
+	width:1110px;height:0px;
+	/* border:1px solid #f00; */
+	overflow:hidden;
+	/* display:none; */
+	transition:all 0.5s linear;
+}
+ /* .open{
+	display:block !important;
+} */
+.open{
+	height:900px !important;
+}
+#card div p span{
+    margin-left:7rem;
+}
+#card div p span a img{
+    transition:all 0.3s linear;
+}
+#card div p span a:hover img{
+	transform:scale(1.1);
 }

@@ -6,14 +6,14 @@
     width:100%;
   }
   .my_footer{
-    height:47rem;
+    height:40rem;
   }
   @media (min-width:992px){
     .my_header{
       height:10rem;
     }
     .my_footer{
-      height:48rem;
+      height:40rem;
     }
   }
   @media (min-width:768px) and (max-width:991px){
@@ -21,7 +21,7 @@
       height:15rem;
     }
     .my_footer{
-      height:55rem;
+      height:40rem;
     }
   }
   @media (min-width:576px) and (max-width:767px) {
@@ -29,6 +29,6 @@
       height:16rem;
     }
     .my_footer{
-      height:62rem;
+      height:40rem;
     }
   }

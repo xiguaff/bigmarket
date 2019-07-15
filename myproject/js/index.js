@@ -20,7 +20,13 @@ function skiplogin(){
         location.href="userlogin.html"
     };
 }
-
+ function skip_site(){
+    //获取前一个网页？后面的参数
+	var url=new URLSearchParams(location.search);
+	//获取参数中uid
+    var uid=url.get("uid");
+    location.href="site.html?uid="+uid;
+ }
 
 function skipuserlist(){
     //获取前一个网页？后面的参数
@@ -58,7 +64,7 @@ function conttime(){
     //获取当地时间
     var now= new Date();
     //设置截止时间
-    var end=new Date("2019/7/14 00:00:00");
+    var end=new Date("2019/7/19 00:00:00");
     //计算两个时间相差的毫秒数并转成秒数
     var diff=Math.floor((end-now)/1000);
     //计算相差的小时数

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/mycar.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/popper.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
@@ -64,7 +65,7 @@
                 <p class="h4 text-danger">全部商品</p><span></span>
             </div>
             <div class="nav_car">
-                <input type="checkbox" data-input="int">全选
+                <input type="checkbox" data-input="int" class="int_style">全选
                 <span>商品</span>
                 <span>单价</span>
                 <span>数量</span>
@@ -76,10 +77,11 @@
                 <span>华为自营店</span>
             </div>
             <div class="car_list mt-2">
+                <label for="int2">
                 <div class="row m-0">
                     <div class="col-6 p-0">
                         <div class="d-flex p-3 pl-2">
-                            <input type="checkbox" class="mt-3">
+                            <input type="checkbox" class="mt-3" id="int2">
                             <div class="d-flex">
                                 <img src="../image/pro_phone.jpg" alt="">
                                 <p class="mt-2 text-muted">华为 HUAWEI P30 Pro 超感光徕卡四摄10倍混合变焦麒麟980芯片屏内指纹 8GB+128GB赤茶橘全网通版双4G手机</p>
@@ -102,12 +104,47 @@
                         </div>
                     </div>
                 </div>
+                </label>
             </div>
             <div class="mt-3 ml-3">
                 <input type="checkbox">
                 <span>荣耀自营店</span>
             </div>
             <div class="car_list mt-2">
+                <label for="int1">
+                <div class="row m-0">
+                    <div class="col-6 p-0">
+                        <div class="d-flex p-3">
+                            <input type="checkbox" class="mt-3" id="int1">
+                            <div class="d-flex">
+                                <img src="../image/pro_1.jpg" alt="">
+                                <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="p-3 d-flex">
+                            <p class="ml-4 price_color">￥4299.00</p>
+                            <div class="ml-5 list_width">
+                                <button class="btn_list btn_rela1">-</button>
+                                <input type="text" class="input_list" value="1">
+                                <button class="btn_list btn_rela2">+</button>                               
+                            </div>
+                            <p class="price_color ml-1" style="width:80px;">￥4299.00</p>
+                            <div class="ml-4">
+                                <p class="font_small">移动到我的关注</p>
+                                <p class="font_small">删除</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </label>
+            </div>
+            <!-- <div class="mt-3 ml-3">
+                <input type="checkbox">
+                <span>荣耀自营店</span>
+            </div> -->
+            <!-- <div class="car_list mt-2">
                 <div class="row m-0">
                     <div class="col-6 p-0">
                         <div class="d-flex p-3">
@@ -134,40 +171,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mt-3 ml-3">
-                <input type="checkbox">
-                <span>荣耀自营店</span>
-            </div>
-            <div class="car_list mt-2">
-                <div class="row m-0">
-                    <div class="col-6 p-0">
-                        <div class="d-flex p-3">
-                            <input type="checkbox" class="mt-3">
-                            <div class="d-flex">
-                                <img src="../image/pro_1.jpg" alt="">
-                                <p class="mt-2 text-muted">荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙5 3500U 8G 512G FHD IPS 指纹解锁）冰河银 【618年中盛</p>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="col-6 p-0">
-                        <div class="p-3 d-flex">
-                            <p class="ml-4 price_color">￥4299.00</p>
-                            <div class="ml-5 list_width">
-                                <button class="btn_list btn_rela1">-</button>
-                                <input type="text" class="input_list" value="1">
-                                <button class="btn_list btn_rela2">+</button>                               
-                            </div>
-                            <p class="price_color ml-1" style="width:80px;">￥4299.00</p>
-                            <div class="ml-4">
-                                <p class="font_small">移动到我的关注</p>
-                                <p class="font_small">删除</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-3 ml-3">
+            </div> -->
+            <!-- <div class="mt-3 ml-3">
                     <input type="checkbox">
                     <span>荣耀自营店</span>
                 </div>
@@ -198,14 +203,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             <div class="car_cal mt-4 d-flex justify-content-between">
                 <div class="d-flex ml-3">
-                    <div class="input_move">
-                        <input type="checkbox"> 
-                    </div>
                     <div>
-                        <span class="font_small ml-2">全选</span>
                         <span><a href="" class="text-muted font_small ml-2">删除选中商品</a></span>
                         <span><a href="" class="text-muted font_small ml-2">移到关注</a></span>
                         <span><a href="" class="text-muted font_small ml-2">清理购物车</a></span>
@@ -213,7 +214,7 @@
                 </div>
                 <div class="d-flex">
                     <p class="font_small mr-3">已选择&nbsp;<span class="text-danger">0</span>&nbsp;件商品</p>
-                    <p class="text-muted mr-3">总价：<span class="text-danger font-weight-bold"></span></p>
+                    <p class="text-muted mr-3">总价：<span class="text-danger font-weight-bold">￥00.00</span></p>
                     <a href="" class="a_count">去&nbsp;结&nbsp;算</a>
                 </div>
             </div>
@@ -253,24 +254,173 @@
                 <p class="text-muted font_small">1415人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
             </div>
         </div>
+        <div class="car_recom mt-3 d-flex">
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom5.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">宏碁（Acer）商祺SQX4270 140N 商用办公台式电脑整机（八代G4900 4G 1T </p>
+                <p class="price_color font_small mb-1">￥2099.00</p>
+                <p class="text-muted font_small">4515人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom6.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">惠普（HP）小欧290 商务办公台式电脑整机（i3-8100 8G 1TB WiFi串口 Win10 </p>
+                <p class="price_color font_small mb-1">￥2899.00</p>
+                <p class="text-muted font_small">4015人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom7.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0 p_height">联想（Lenovo）天逸510S 第八代英特尔酷睿i3 个人商务台式电脑整机 （i3-8100 8G 1T win10）19.5英寸</p>
+                <p class="price_color font_small mb-1">￥2999.00</p>
+                <p class="text-muted font_small">4015人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom8.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0 p_height">戴尔(DELL)成就3470 英特尔酷睿i3 高性能 商用办公 台式电脑整机(i3-8100 8G 1T 键鼠 WIFI 蓝牙)21.5英寸</p>
+                <p class="price_color font_small mb-1">￥2899.00</p>
+                <p class="text-muted font_small">18015人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+        </div>
+        <div class="car_recom mt-3 d-flex">
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom9.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">水密码补水护肤品礼盒 补水锁水保湿滋润 洗面奶水乳护肤品套装 冰川矿泉 </p>
+                <p class="price_color font_small mb-1">￥159.00</p>
+                <p class="text-muted font_small">515人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom10.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0">24k黄金精华护肤品礼盒套装美肤嫩白控油祛痘黑头洗面奶补水保湿乳润肤霜</p>
+                <p class="price_color font_small mb-1">￥249.00</p>
+                <p class="text-muted font_small">405人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom11.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0 p_height">珀莱雅弹润芯肌护肤品套装女提拉紧致补水保湿化妆品淡化细纹 水乳+精华</p>
+                <p class="price_color font_small mb-1">￥199.00</p>
+                <p class="text-muted font_small">415人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+            <div class="w-25 p-3">
+                <div class="text-center">
+                    <img src="../image/car_recom12.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-0 p_height">HFP护肤品套装美肤白皙补水保湿控油烟酰胺原液精华夏季水乳高效提亮肤色</p>
+                <p class="price_color font_small mb-1">￥299.00</p>
+                <p class="text-muted font_small">180人已购买<span><a href=""><img src="../image/shop_car.png" alt=""></a></span></p>
+            </div>
+        </div>
+        <p class="mb-0 mt-3">
+            <a href="javascript:;" class="text-muted font_small dis_a" data-toggle="div" data-target="content1">猜你喜欢</a>
+            <a href="javascript:;" class="text-muted font_small dis_a" data-toggle="div" data-target="content2">随心购</a>
+        </p>
+        <div class="position-relative clear_abs">
+        <div class="d-flex div_absolu" id="content1">
+            <div class="car_bottom p-3">
+                <div class="text-center">
+                    <img src="../image/car_like.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-2">华为 HUAWEI Mate 20 Pro (UD)屏内指纹版麒麟980芯片全面屏超大广角徕卡</p>
+                <p class="price_color font_small mb-1">￥5090.00</p>
+                <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+            </div>
+            <div class="car_bottom p-3">
+                <div class="text-center">
+                    <img src="../image/car_like2.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-2">华为 HUAWEI P30 Pro 超感光徕卡四摄10倍混合变焦麒麟980芯片屏内指纹</p>
+                <p class="price_color font_small mb-1">￥5900.00</p>
+                <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+            </div>
+            <div class="car_bottom p-3">
+                <div class="text-center">
+                    <img src="../image/car_like3.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-2">戴尔(DELL)成就3470 英特尔酷睿i3 高性能 商用办公 台式电脑整机(i3-8100 )</p>
+                <p class="price_color font_small mb-1">￥2890.00</p>
+                <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+            </div>
+            <div class="car_bottom p-3">
+                <div class="text-center">
+                    <img src="../image/car_like4.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-2">华为 HUAWEI P30 Pro 全面屏手机【华为直供+咨询减价+分期免息0首付+1</p>
+                <p class="price_color font_small mb-1">￥5480.00</p>
+                <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+            </div>
+        </div>
+        <div class="d-flex div_absolu" id="content2">
+            <div class="car_bottom p-3">
+                <div class="text-center">
+                    <img src="../image/car_like5.jpg" alt="">
+                </div>
+                <p class="text-muted font_small mt-3 mb-2">【大超市】益达（Extra）木糖醇无糖口香糖蜜桃芒果混合味70粒98g单瓶</p>
+                <p class="price_color font_small mb-1">￥20.00</p>
+                <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+            </div>
+            <div class="car_bottom">
+                <div class="car_bottom p-3">
+                    <div class="text-center">
+                        <img src="../image/car_like6.jpg" alt="">
+                    </div>
+                    <p class="text-muted font_small mt-3 mb-2">【大超市】曼妥思清劲速无糖口香糖清新薄荷味56g（新老包装随机发售）</p>
+                    <p class="price_color font_small mb-1">￥9.00</p>
+                    <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+                </div>
+            </div>
+            <div class="car_bottom">
+                <div class="car_bottom p-3">
+                    <div class="text-center">
+                        <img src="../image/car_like7.jpg" alt="">
+                    </div>
+                    <p class="text-muted font_small mt-3 mb-2">【大超市】绿箭（DOUBLEMINT）无糖薄荷糖原味薄荷味35粒23.8g单盒金属装</p>
+                    <p class="price_color font_small mb-1">￥7.50</p>
+                    <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+                </div>
+            </div>
+            <div class="car_bottom">
+                <div class="car_bottom p-3">
+                    <div class="text-center">
+                        <img src="../image/car_like8.jpg" alt="">
+                    </div>
+                    <p class="text-muted font_small mt-3 mb-2">【大超市】好时之吻Kisses牛奶巧克力82g（加量装与正常装随机发售）</p>
+                    <p class="price_color font_small mb-1">￥27.50</p>
+                    <a href="" class="car_a"><img src="../image/shop_car.png" alt="" class="pb-2 mr-3"><span>加入购物车</span></a>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
+    <iframe class="my_footer mt-5" src="footer.html" frameborder="0" scrolling="no"></iframe>
 <script>
-    (function(){
-        //计算默认总价
-        //获取每个保存小计的元素 
-        var div=document.getElementById("list");
-        var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
-        //遍历获取到的集合并将总价累加到变量中
-        var subtotal=0;
-        for(var price of price_1){
-             subtotal+=parseFloat(price.innerHTML.slice(1));
-        }
-        //获取保存总价的元素
-        var div=document.getElementsByClassName("car_cal");
-        var count_price=div[0].querySelector("div:last-child p.text-muted span");
-        //计算总价
-        count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
-    })();
+    // (function(){
+    //     //计算默认总价
+    //     //获取每个保存小计的元素 
+    //     var div=document.getElementById("list");
+    //     var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
+    //     //遍历获取到的集合并将总价累加到变量中
+    //     var subtotal=0;
+    //     for(var price of price_1){
+    //          subtotal+=parseFloat(price.innerHTML.slice(1));
+    //     }
+    //     //获取保存总价的元素
+    //     var div=document.getElementsByClassName("car_cal");
+    //     var count_price=div[0].querySelector("div:last-child p.text-muted span");
+    //     //计算总价
+    //     count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
+    // })();
 
 
     //获取能够找到button的父元素集合
@@ -299,23 +449,23 @@
                 /*计算小计*/
                 //获取能够找到单价的父元素集合
                 var div_1=btn.parentNode.parentNode;
-                //将单价转为数值
+                //将单价转为浮点数
                 var price=parseFloat(div_1.children[0].innerHTML.slice(1));
                 div_1.children[2].innerHTML=`￥${(price*num).toFixed(2)}`;
                 //计算总价
                 //获取每个保存小计的元素          
-                var div=document.getElementById("list");
-                var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
-                //遍历获取到的集合并将总价累加到变量中
-                var subtotal=0;
-                for(var price of price_1){
-                    subtotal+=parseFloat(price.innerHTML.slice(1));
-                }
-                //获取保存总价的元素
-                var div=document.getElementsByClassName("car_cal");
-                var count_price=div[0].querySelector("div:last-child p.text-muted span");
-                //计算总价
-                count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
+                // var div=document.getElementById("list");
+                // var price_1=div.querySelectorAll(".car_list p.price_color.ml-1")
+                // //遍历获取到的集合并将总价累加到变量中
+                // var subtotal=0;
+                // for(var price of price_1){
+                //     subtotal+=parseFloat(price.innerHTML.slice(1));
+                // }
+                // //获取保存总价的元素
+                // var div=document.getElementsByClassName("car_cal");
+                // var count_price=div[0].querySelector("div:last-child p.text-muted span");
+                // //计算总价
+                // count_price.innerHTML=`￥${subtotal.toFixed(2)}`;
             };
         };
     };
@@ -330,27 +480,44 @@
             var input=this;
             //寻找需要修改的元素
             var ints=document.querySelectorAll("div.car_list div.d-flex input.mt-3");
+            //获得保存总价的元素
+            var pri_count=document.getElementsByClassName("car_cal")[0].children[1].children[1].children[0];
+            // console.log(pri_count);
+            count=0;
             //遍历获得的元素集合
             for(var int of ints){
                 //并修改每个元素
+                //寻找每个商品input对应的小计元素
+                var price=int.parentNode.parentNode.nextElementSibling.children[0].children[2];
+                var price=parseFloat(price.innerHTML.slice(1));
+                //  console.log(price);
                 ////获取当input选中时需要改变背景色的div
                 var span=document.getElementsByClassName("car_cal")[0].lastElementChild.children[0].children[0];
                 var div=int.parentNode.parentNode.parentNode.parentNode;
                 int.checked=input.checked;
+                // console.log(count)
                 //判断当前input被全选按钮选中时，改变背景色
                 if(int.checked=input.checked){
                     i=ints.length;
                     div.style.backgroundColor="#eeeeee";
                     span.innerHTML=i;
+                    // console.log(i);
+                    count+=price;
+                    pri_count.innerHTML=`￥${count.toFixed(2)}`;
                 }else{
                     //否则div没有背景色
                     div.style.backgroundColor="";
                     span.innerHTML=0;
+                    // console.log(i);
                     i=0;
+                    pri_count.innerHTML="￥00.00";
+                    count=0;
                 };
             };
         };
         var i=0;
+        //定义变量保存总价
+        var count=0;
         //下面的每个input都会影响全选按钮
         var ints=document.querySelectorAll("div.car_list div.d-flex input.mt-3");
         for(var int of ints){
@@ -359,15 +526,28 @@
                 var span=document.getElementsByClassName("car_cal")[0].lastElementChild.children[0].children[0];
                 //获取当input点击时需要改变背景色的div
                 var div=int.parentNode.parentNode.parentNode.parentNode;
+                //寻找每个商品input对应的小计元素
+                var price=int.parentNode.parentNode.nextElementSibling.children[0].children[2];
+                var price=parseFloat(price.innerHTML.slice(1));
+                // console.log(price)
+                //获得保存总价的元素
+                var pri_count=document.getElementsByClassName("car_cal")[0].children[1].children[1].children[0];
+                // console.log(pri_count);
+                // console.log(price);
+                // console.log(count)
                 //判断下面如果有一个input没有被选中，则上面的全选按钮也取消被选中
                 if(int.checked==false){
                     i--;
                     input.checked=false;
                     div.style.backgroundColor=""; //当前input没有被选中时，div没有背景色
                     span.innerHTML=i;
+                    count-=price
+                    pri_count.innerHTML=`￥${count.toFixed(2)}` 
                 }else{
                     i++;
                     span.innerHTML=i;
+                    count+=price
+                    pri_count.innerHTML=`￥${count.toFixed(2)}`
                     //如果下面则input一个一个全部选中则上面的全选按钮也选中;
                     div.style.backgroundColor="#eeeeee";  //当前input被选中时，div更改背景色
                     //寻找下面input是否有未被选中的
@@ -380,6 +560,25 @@
             };
         };
     })();
+
+    //通过点击模块转换
+    //获取触发事件的元素
+    var as=document.querySelectorAll(".container p [data-toggle=div]");
+    //定义变量保存触发事件元素zindex变化
+    var i=10;
+    //为元素绑定事件函数
+    for(var a of as){
+        a.onclick=function(){
+            var a=this;
+            //寻找需要修改的元素
+            //获取触发事件元素上绑定的id
+            var id=a.getAttribute("data-target");  //var id=a.dataset.target  自定义属性获取属性方法
+            var div=document.getElementById(id);
+            //修改元素
+            var style=getComputedStyle(a);
+                div.style.zIndex=i++;
+        };
+    };
 </script>
 </body>
 </html>

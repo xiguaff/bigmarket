@@ -22,3 +22,7 @@ ul.list-unstyled li:not(:first-child) a{
 li.breadcrumb-item+ li.breadcrumb-item::before{
     content:"丨";
 }
+/*页面定宽*/
+.div_width{
+    width:1140px;
+}
