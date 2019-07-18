@@ -6,6 +6,7 @@ const bodyParser=require("body-parser");
 
 //引入路由器
 const userRouter=require("./routers/user.js");
+const index=require("./routers/index.js");
 
 //创建服务器
 var app=express();
@@ -26,3 +27,4 @@ app.use(bodyParser.urlencoded({
 
 //使用路由器
 app.use("/mypro",userRouter);
+app.use("/index",index);
